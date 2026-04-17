@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-04-16",
+  "lastUpdated": "2026-04-16",
+  "revision": 2,
+  "revisionNote": "Integrated confirmed client details: NJ REALTOR® License #2669265, Keller Williams Village Square Realty (74 Godwin Ave, Ridgewood NJ 07450), office (201) 445-4300, mobile (201) 314-5696, sdejesus@kw.com, live personal subdomain https://sdejesus.kw.com, bilingual English+Spanish, NAHREP North NJ network (Gala attendee). Added bilingual + NAHREP niche opportunities, Bergen bilingual-agent scan in directLocal, and bilingual-luxury gap to marketGaps.",
+  "client": "The SD Group",
+  "clientProfile": {
+    "legalName": "Sarah De Jesus",
+    "licenseNumber": "NJ REALTOR® #2669265",
+    "brokerage": "Keller Williams Village Square Realty",
+    "officeAddress": "74 Godwin Ave, Ridgewood, NJ 07450",
+    "officePhone": "(201) 445-4300",
+    "mobilePhone": "(201) 314-5696",
+    "email": "sdejesus@kw.com",
+    "personalKwSubdomain": "https://sdejesus.kw.com",
+    "languages": ["English", "Spanish"],
+    "affiliations": ["NAHREP (National Association of Hispanic Real Estate Professionals) — North NJ chapter, Gala attendee"],
+    "differentiatorSummary": "Bilingual (English + Spanish) luxury-brand REALTOR® in Bergen County — a combination currently unserved at the $1.2M+ tier — with active plug-in to NAHREP's 40,000+ member Hispanic real estate network."
+  },
+  "categories": {
+    "directLocal": [
+      {
+        "name": "Phyllis Calianese",
+        "url": "https://www.phylliscalianese.com/",
+        "location": "Ridgewood, NJ (Keller Williams Village Square)",
+        "description": "Ranked #1 individual agent at KW Village Square in 2019, 2021, 2022, 2023. Top 1% of Bergen County realtors with deep Ridgewood roots.",
+        "standout": "Longstanding #1 individual producer reputation; neighborhood-by-neighborhood Ridgewood expertise",
+        "priceRange": "$800K - $2.5M, median ~$1.2M",
+        "designScore": 5,
+        "instagram": "@phylliscalianese",
+        "followers": "~1.5k"
+      },
+      {
+        "name": "The Colligan Group (Nena Colligan)",
+        "url": "https://nenacolligan.com/",
+        "location": "Ridgewood, NJ (Keller Williams Village Square)",
+        "description": "Boutique team serving Ridgewood and Bergen County with a polished, modern branded site and consistent local marketing presence.",
+        "standout": "Team brand (not just solo agent) with a refined editorial website feel",
+        "priceRange": "$900K - $2.2M, median ~$1.3M",
+        "designScore": 7,
+        "instagram": "@thecolligangroup",
+        "followers": "~3k"
+      },
+      {
+        "name": "The Gill Group",
+        "url": "https://www.gowithgill.com/",
+        "location": "Ridgewood, NJ (Keller Williams Village Square)",
+        "description": "Top-producing team at KW Village Square for 8+ years running; high-volume Bergen County operators.",
+        "standout": "Volume leader with strong referral engine across Bergen County",
+        "priceRange": "$700K - $2M, median ~$1.1M",
+        "designScore": 6,
+        "instagram": "@thegillgroupnj",
+        "followers": "~2.5k"
+      },
+      {
+        "name": "Grazyna 'Grace' Ziarko",
+        "url": "https://www.christiesrealestate.com/real-estate-agents/grazyna-grace-ziarko/14527/",
+        "location": "Franklin Lakes / Wyckoff, NJ (Christie's International Real Estate)",
+        "description": "Christie's top producer with $42M+ in 2024 volume across 21 transactions. Closed headline sales like 322 Crescent Drive at $3.5M.",
+        "standout": "Highest price-point wins in the submarket; Christie's luxury branding",
+        "priceRange": "$1.5M - $5M+, median ~$2.2M",
+        "designScore": 7,
+        "instagram": "@graceziarko",
+        "followers": "~2k"
+      },
+      {
+        "name": "Madison Group (Michele DeStefano)",
+        "url": "https://madisongroupproperties.com/",
+        "location": "Wyckoff, NJ (eXp Realty)",
+        "description": "Wyckoff-based team, first eXp Branch office in Bergen County. Polished team site with strong buyer/seller guide content.",
+        "standout": "Tech-forward eXp model + locally branded team experience",
+        "priceRange": "$750K - $2M, median ~$1.1M",
+        "designScore": 7,
+        "instagram": "@madisongroupproperties",
+        "followers": "~4k"
+      },
+      {
+        "name": "Terrie O'Connor Realtors - Wyckoff",
+        "url": "https://www.tocr.com/",
+        "location": "Wyckoff, NJ (independent boutique brokerage)",
+        "description": "Dominant boutique brokerage accounting for 6% of Bergen County property sales in 2024. Multi-office local institution.",
+        "standout": "Hometown boutique authority; multi-generational client book",
+        "priceRange": "$600K - $2.5M, median ~$1M",
+        "designScore": 6,
+        "instagram": "@terrieoconnorrealtors",
+        "followers": "~3.5k"
+      },
+      {
+        "name": "Kelly O'Brien & Till Horkenbach",
+        "url": "https://kwvillagesquare.yourkwoffice.com/our-agents",
+        "location": "Ridgewood, NJ (Keller Williams Village Square)",
+        "description": "Combined 40+ years real estate and 65+ years luxury hospitality background; luxury-positioned KW duo targeting discerning clients.",
+        "standout": "Luxury hospitality DNA — white-glove client service positioning",
+        "priceRange": "$1M - $3M, median ~$1.6M",
+        "designScore": 5,
+        "instagram": "@kellyandtill",
+        "followers": "~1k"
+      },
+      {
+        "name": "Maria Rini",
+        "url": "https://www.mariarini.com/",
+        "location": "Bergen County (Lyndhurst / Rutherford / Carlstadt), NJ (Re/Max Venture Realty)",
+        "description": "High-volume multilingual agent (English + Spanish + Italian) serving eastern Bergen County. Strong transaction cadence in $500K–$1.2M range.",
+        "standout": "Multilingual service and high local review count",
+        "priceRange": "$500K - $1.2M, median ~$700K",
+        "designScore": 5,
+        "instagram": "@mariarini_realtor",
+        "followers": "~2k",
+        "bilingual": true,
+        "languages": ["English", "Spanish", "Italian"],
+        "overlapWithSDGroup": "Partial — shares Spanish-language capability but sits in mid-market east Bergen, not Ridgewood/Wyckoff luxury corridor. Demonstrates the pattern: bilingual Bergen agents exist, but none are positioned at luxury."
+      },
+      {
+        "name": "Luz Betancourt",
+        "url": "https://www.remax.com/real-estate-agents/luz-betancourt-hackensack-nj/103567024",
+        "location": "Bergen County (Hackensack / Fair Lawn corridor), NJ (RE/MAX / CBR affiliates)",
+        "description": "Bilingual English+Spanish agent with an established Latino sphere of influence across mid-market Bergen County.",
+        "standout": "Spanish fluency and a deep Latino community SOI",
+        "priceRange": "$450K - $1.1M, median ~$650K",
+        "designScore": 3,
+        "instagram": "@luzbetancourt.realtor",
+        "followers": "~1k",
+        "bilingual": true,
+        "languages": ["English", "Spanish"],
+        "overlapWithSDGroup": "Partial — same bilingual capability, but no luxury positioning, no NAHREP credentialing signal, no premium web presence. Confirms the open lane for a bilingual LUXURY agent in Bergen."
+      }
+    ],
+    "aspirationalNational": [
+      {
+        "name": "SERHANT.",
+        "url": "https://serhant.com/",
+        "location": "New York, NY (14 states + DC)",
+        "description": "Ryan Serhant's media-first brokerage — the most-followed real estate brand in the world with 9.5M+ social followers. Sets the bar for cinematic agent-brand sites.",
+        "standout": "Scroll-driven video hero, editorial property storytelling, in-house media studio",
+        "priceRange": "$2M - $50M+",
+        "designScore": 10,
+        "instagram": "@serhant",
+        "followers": "2M+"
+      },
+      {
+        "name": "The Agency",
+        "url": "https://www.theagencyre.com/",
+        "location": "Beverly Hills, CA (global)",
+        "description": "Mauricio Umansky's global luxury boutique, recognized for moody editorial photography, immersive listing pages, and a cohesive monochrome-luxe brand system.",
+        "standout": "Best-in-class listing pages; black-and-gold editorial brand",
+        "priceRange": "$3M - $100M+",
+        "designScore": 10,
+        "instagram": "@theagencyre",
+        "followers": "900k+"
+      },
+      {
+        "name": "Josh Flagg",
+        "url": "https://www.joshflagg.com/",
+        "location": "Los Angeles, CA (Douglas Elliman)",
+        "description": "Million Dollar Listing LA agent; personal brand site layered with press, book, and portfolio. Classic-luxury aesthetic with strong photography.",
+        "standout": "Press-first storytelling; celebrity-agent brand model",
+        "priceRange": "$3M - $80M+",
+        "designScore": 9,
+        "instagram": "@joshflagg1",
+        "followers": "650k+"
+      },
+      {
+        "name": "Oren Alexander / Alexander Team",
+        "url": "https://alexanderteam.com/",
+        "location": "New York, NY / Miami, FL",
+        "description": "Ultra-luxury team with cinematic hero videos, full-bleed imagery, and ultra-high-price-point portfolio. Monochrome, refined aesthetic.",
+        "standout": "Cinematic full-screen video hero sequences; minimalist typography",
+        "priceRange": "$10M - $250M+",
+        "designScore": 10,
+        "instagram": "@alexanderteam",
+        "followers": "200k+"
+      },
+      {
+        "name": "Aaron Kirman Group",
+        "url": "https://aaronkirman.com/",
+        "location": "Los Angeles, CA (Christie's International)",
+        "description": "$12B+ in career sales; award-winning editorial site with architectural storytelling, interactive maps, and a beautifully sparse design system.",
+        "standout": "Architecture-as-hero editorial layouts",
+        "priceRange": "$5M - $150M+",
+        "designScore": 10,
+        "instagram": "@aaronkirman",
+        "followers": "170k+"
+      }
+    ],
+    "experience": [
+      {
+        "name": "Athena Calderone / EyeSwoon",
+        "url": "https://eye-swoon.com/",
+        "location": "Brooklyn, NY (editorial/design)",
+        "description": "Interior designer with a globally admired editorial site. Tastemaker brand that Bergen buyers reference when imagining their own home.",
+        "standout": "Editorial photography + tasteful typography as a design template",
+        "priceRange": "Project-based, $250K+",
+        "designScore": 9,
+        "instagram": "@eyeswoon",
+        "followers": "890k+"
+      },
+      {
+        "name": "LDa Architecture & Interiors",
+        "url": "https://ldarchitecture.com/",
+        "location": "Cambridge, MA (Northeast luxury residential)",
+        "description": "Editorial architecture studio whose residential portfolio visually defines high-end Northeast homes. Cited for its portfolio-first site.",
+        "standout": "Projects grid with immersive full-screen detail pages",
+        "priceRange": "Project-based, $500K+",
+        "designScore": 9,
+        "instagram": "@ldarchitecture",
+        "followers": "40k+"
+      },
+      {
+        "name": "Greenbaum Interiors",
+        "url": "https://greenbauminteriors.com/",
+        "location": "Paterson, NJ (Bergen/Passaic luxury residential)",
+        "description": "Long-established NJ luxury interior design firm and showroom; local Bergen-adjacent tastemaker competing for the same discretionary dollar.",
+        "standout": "Brick-and-mortar showroom backing online presence",
+        "priceRange": "$75K - $1M+ projects",
+        "designScore": 6,
+        "instagram": "@greenbauminteriors",
+        "followers": "~6k"
+      },
+      {
+        "name": "Creative Design Construction",
+        "url": "https://creativedesignnj.com/",
+        "location": "Franklin Lakes, NJ (luxury builders)",
+        "description": "North NJ luxury custom builder serving Bergen County estate buyers. Buyers engage them during and after transactions.",
+        "standout": "Local custom-build authority with project galleries",
+        "priceRange": "$1.5M - $6M+ builds",
+        "designScore": 6,
+        "instagram": "@creativedesign_nj",
+        "followers": "~3k"
+      }
+    ],
+    "luxuryLifestyle": [
+      {
+        "name": "(201) Magazine",
+        "url": "https://www.201magazine.com/",
+        "location": "Bergen County, NJ",
+        "description": "Premier Bergen County lifestyle publication covering food, homes, fashion. Sets the visual and editorial tone for affluent Bergen households.",
+        "standout": "Hyper-local editorial authority; home-of-the-year features",
+        "priceRange": "Editorial / ad-supported",
+        "designScore": 6,
+        "instagram": "@201mag",
+        "followers": "~30k"
+      },
+      {
+        "name": "DuJour Magazine",
+        "url": "https://dujour.com/",
+        "location": "New York / National luxury",
+        "description": "National luxury lifestyle magazine read by the North Jersey / NYC affluent set. Sets the tier 1 taste bar for luxury content.",
+        "standout": "Editorial polish, celebrity and real estate crossover features",
+        "priceRange": "Editorial / luxury ad-supported",
+        "designScore": 8,
+        "instagram": "@dujourmedia",
+        "followers": "130k+"
+      },
+      {
+        "name": "Ridgewood Country Club",
+        "url": "https://www.ridgewoodcc.org/",
+        "location": "Paramus, NJ",
+        "description": "Historic private club adjacent to the Ridgewood/Paramus market. A primary social hub for Bergen's affluent homeowners.",
+        "standout": "Access-defining membership; anchor for local affluent network",
+        "priceRange": "Membership initiation $150K+",
+        "designScore": 6,
+        "instagram": "@ridgewoodcc",
+        "followers": "~2k"
+      },
+      {
+        "name": "Arhaus / RH Paramus",
+        "url": "https://rh.com/",
+        "location": "Paramus / Bergen County",
+        "description": "Premium home furnishings showrooms functioning as lifestyle destinations. New Bergen homeowners engage them within 90 days of closing.",
+        "standout": "Gallery-as-retail model; cinematic online catalog",
+        "priceRange": "$5K - $250K+ projects",
+        "designScore": 10,
+        "instagram": "@restorationhardware",
+        "followers": "2M+"
+      }
+    ]
+  },
+  "nicheOpportunities": [
+    "Bergen County's only premium-brand bilingual buyer concierge — combining luxury positioning, English + Spanish native service, and a cinematic editorial site to own a lane no Ridgewood/Wyckoff/Saddle River competitor currently occupies. Assets: EN/ES site toggle, Spanish listing flyers, bilingual video tours, /es landing page.",
+    "NAHREP-credentialed luxury Latino buyer representation — leverage Sarah's active NAHREP North NJ Gala participation to claim a credentialing signal no luxury Bergen competitor has. Plugs The SD Group into the 40,000+ member Hispanic real estate network for inbound relocators, international buyers, and cross-market referrals. Assets: NAHREP badge, dedicated bilingual case study, national referral landing page.",
+    "First-time Bergen County buyer onboarding — a cinematic video-driven course/series that walks Millennials and young families through buying their first $900K+ home in Ridgewood/Wyckoff, owning the 'teacher' positioning no local competitor holds.",
+    "NYC-to-Bergen + LatAm-to-Bergen relocation concierge — a dedicated landing experience for Manhattan/Brooklyn families trading up for space, plus a bilingual relocation track for Latin American executives on corporate transfer (a segment only Sarah can credibly serve).",
+    "Off-market private network for pre-list sellers — an invitation-only pocket-listing network for Ridgewood/Wyckoff sellers who want discretion; most local agents rely only on MLS.",
+    "Multi-generational / downsizer strategy — a vertical for Bergen empty-nesters coordinating estate sale, downsize, and adult-child upsize in one integrated package.",
+    "Systems-driven selling playbook — a publicly published 12-step listing methodology (the 'SD Method') turning the brand's 'systems-driven' DNA into a visible, tangible differentiator no local agent is marketing."
+  ],
+  "marketGaps": "The Bergen County real estate web presence is dominated by template IDX sites, brokerage-subdomain agent pages, and stock Zillow-style listing grids. Even top producers like Phyllis Calianese and boutique teams at Christie's rely on dated layouts, generic stock imagery, and copy-heavy bios — there is almost no cinematic video, no editorial property storytelling, and no AI-driven concierge experience in the entire Ridgewood/Wyckoff/Franklin Lakes corridor. Critically, no Bergen County agent is positioned as luxury AND bilingual English+Spanish with NAHREP credentialing — bilingual agents exist but cluster in mid-market eastern Bergen (Lyndhurst, Rutherford, Hackensack), while luxury agents in Ridgewood/Saddle River/Wyckoff run English-only; this bilingual-luxury intersection is Sarah De Jesus's clearest unclaimed wedge and the Latino professional + international buyer segment at $1.2M+ is currently under-served. National aspirational brands (Serhant, The Agency, Alexander Team, Ivan Estrada) have set a visual bar that no Bergen competitor is meeting. Mobile experiences are especially weak: slow loads, cramped galleries, and no scroll-driven narrative. Niche segments (first-time buyers, NYC relocators, multi-gen households, LatAm executive relocators) are entirely unserved with dedicated content hubs. This is a wide-open lane for a cinematic, monochrome, systems-driven, bilingual brand to leapfrog the category locally.",
+  "designTrendsMissing": [
+    "Scroll-driven cinematic video hero with muted B-roll of Ridgewood/Wyckoff streets, homes, and lifestyle — no local agent uses video as the primary hero.",
+    "Editorial property storytelling (long-form listing pages with photography, architect notes, neighborhood context) rather than MLS-style data tables.",
+    "AI voice concierge / chat agent for instant buyer-qualification and neighborhood Q&A — zero local adoption.",
+    "Interactive neighborhood maps with hover-reveal micro-data (schools, commute, median price, recent sales) instead of static Google embeds.",
+    "Kinetic serif typography + monochrome color system that signals editorial restraint — local competitors default to blue-accent corporate palettes and sans-serif body copy."
+  ]
+}

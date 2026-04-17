@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SD Group — Hero Concepts · Phase 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414;--deep-ink:#0A0A0A;--bone:#F5F1EA;--champagne:#B59766;
+  --moss:#3A4A3F;--white:#FFFFFF;--dim:#6B6B6B;--rule:rgba(20,20,20,0.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Geist',sans-serif;background:var(--bone);color:var(--ink);line-height:1.6}
+h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:400;letter-spacing:-0.02em;line-height:1.08}
+h1{font-size:clamp(56px,9vw,128px);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 40}
+h2{font-size:clamp(36px,5vw,68px);font-weight:400}
+h3{font-size:clamp(28px,3vw,40px);font-weight:400}
+h4{font-size:11px;font-family:'Geist',sans-serif;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--champagne)}
+p{font-size:17px;line-height:1.75;color:rgba(20,20,20,0.82);max-width:68ch}
+em{font-style:italic}
+.container{max-width:1320px;margin:0 auto;padding:0 56px}
+@media (max-width:768px){.container{padding:0 24px}}
+
+/* HERO */
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:100px 0 80px}
+.hero .eyebrow{font-size:13px;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);margin-bottom:32px;font-weight:500}
+.hero h1{max-width:14ch;margin-bottom:32px}
+.hero h1 em{color:var(--champagne);font-weight:300}
+.hero .sub{font-size:21px;max-width:58ch;font-weight:300;color:rgba(20,20,20,0.72);line-height:1.5}
+
+/* CONCEPT CARDS */
+.concepts{padding:80px 0;border-top:1px solid var(--rule)}
+.concept{margin-bottom:140px;position:relative}
+.concept:last-child{margin-bottom:80px}
+.concept-head{display:grid;grid-template-columns:80px 1fr auto;gap:32px;align-items:baseline;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
+.concept-num{font-family:'Fraunces',serif;font-size:96px;font-weight:300;color:var(--champagne);font-style:italic;line-height:1}
+.concept-title h2{margin-bottom:8px}
+.concept-title h2 em{color:var(--champagne)}
+.concept-title .short{font-family:'Fraunces',serif;font-size:22px;font-style:italic;color:var(--dim);font-weight:300}
+.recommend-pill{background:var(--ink);color:var(--champagne);padding:10px 18px;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;font-weight:500;border-radius:2px;white-space:nowrap}
+
+/* VISUAL PREVIEW */
+.concept-visual{aspect-ratio:16/9;background:var(--ink);border-radius:2px;position:relative;overflow:hidden;margin-bottom:48px;display:flex;align-items:center;justify-content:center;color:var(--bone)}
+.concept-visual::before{content:'';position:absolute;inset:0}
+
+.vis-1::before{background:linear-gradient(135deg,#2a1d0e 0%,#5b4020 30%,#8a6632 55%,#b38547 75%,#3a2a15 100%)}
+.vis-1::after{content:'';position:absolute;top:30%;left:55%;width:35%;height:60%;background:radial-gradient(ellipse,rgba(245,200,120,0.45),transparent 70%);filter:blur(40px)}
+
+.vis-2::before{background:linear-gradient(to top,#0f0a05 0%,#241810 20%,#3a2815 45%,#5a3e1f 70%,#a87538 90%,#d4a968 100%)}
+.vis-2::after{content:'';position:absolute;top:35%;left:42%;width:16%;height:50%;background:radial-gradient(ellipse at center top,rgba(255,220,160,0.7),rgba(180,130,60,0.3) 50%,transparent 80%);border-radius:4px 4px 0 0}
+
+.vis-3::before{background:linear-gradient(160deg,#f5f1ea 0%,#e8e0d0 40%,#d4c9b3 70%,#b59766 100%)}
+.vis-3::after{content:'';position:absolute;top:20%;left:20%;width:60%;height:60%;background:radial-gradient(ellipse,rgba(255,255,255,0.4),transparent 70%);filter:blur(60px)}
+
+.vis-label{position:relative;z-index:2;font-family:'Fraunces',serif;font-size:28px;font-style:italic;font-weight:300;text-align:center;padding:20px;background:rgba(20,20,20,0.35);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(245,241,234,0.15);border-radius:2px;max-width:60%}
+.vis-3 .vis-label{color:var(--ink);background:rgba(245,241,234,0.75);border-color:rgba(20,20,20,0.15)}
+
+/* CONCEPT BODY */
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}
+@media (max-width:900px){.concept-grid{grid-template-columns:1fr}}
+.tie{padding:32px;background:var(--white);border:1px solid var(--rule);border-radius:2px}
+.tie h4{color:var(--champagne);margin-bottom:16px}
+.tie h3{font-size:22px;margin-bottom:16px;font-weight:500;color:var(--ink)}
+.tie p{font-size:15px;line-height:1.7;color:rgba(20,20,20,0.78)}
+.tie .line{display:block;margin-top:16px;font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--champagne);border-top:1px solid var(--rule);padding-top:16px}
+
+.prompt-stack{display:flex;flex-direction:column;gap:16px}
+.prompt{padding:28px 32px;background:var(--ink);color:var(--bone);border-radius:2px;position:relative}
+.prompt.motion{background:var(--moss)}
+.prompt .lab{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);margin-bottom:12px;font-weight:500;display:flex;justify-content:space-between}
+.prompt .lab span:last-child{color:rgba(245,241,234,0.5)}
+.prompt p{font-size:13px;line-height:1.65;color:rgba(245,241,234,0.9);font-family:'Geist',sans-serif;max-width:none}
+.prompt code{font-family:'SF Mono','Monaco',monospace;font-size:12px;color:var(--champagne)}
+
+/* META */
+.concept-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:24px;margin-top:32px;padding-top:24px;border-top:1px solid var(--rule)}
+.meta-cell dt{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--dim);margin-bottom:6px;font-weight:500}
+.meta-cell dd{font-family:'Fraunces',serif;font-size:16px;font-weight:400;color:var(--ink)}
+
+/* DECISION */
+.decision{padding:100px 0;border-top:1px solid var(--rule);text-align:center;background:var(--ink);color:var(--bone);margin:80px -100vw 0;box-shadow:0 0 0 100vmax var(--ink);clip-path:inset(0 -100vmax)}
+.decision h2{color:var(--bone);margin-bottom:24px}
+.decision h2 em{color:var(--champagne)}
+.decision p{color:rgba(245,241,234,0.78);margin:0 auto 40px}
+.decision .rec{font-family:'Fraunces',serif;font-size:28px;font-style:italic;color:var(--champagne);margin-bottom:16px}
+
+/* FOOTER */
+footer{padding:60px 0;border-top:1px solid var(--rule);text-align:center;color:var(--dim);font-size:12px;letter-spacing:0.1em;text-transform:uppercase}
+footer .sig{font-family:'Fraunces',serif;font-size:22px;font-style:italic;color:var(--champagne);margin-top:16px;letter-spacing:0;text-transform:none}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<section class="hero">
+  <div class="eyebrow">Phase 3 · Hero Concepts · Pick One</div>
+  <h1>Three <em>hero</em> films.<br>One becomes <em>the site</em>.</h1>
+  <p class="sub">Each concept is a complete 5-second cinematic plate — Gemini-generated still, animated via Kling 3.0 + Seedance 2.0 in parallel. The winner becomes the scroll-scrubbed hero across 150vh at launch.</p>
+</section>
+
+<section class="concepts">
+
+  <!-- CONCEPT 1 -->
+  <div class="concept">
+    <div class="concept-head">
+      <div class="concept-num">I</div>
+      <div class="concept-title">
+        <h2>The <em>Tudor</em> at Golden Hour</h2>
+        <div class="short">A still house. A moving light. One warm window turning on.</div>
+      </div>
+    </div>
+
+    <div class="concept-visual vis-1">
+      <div class="vis-label">"The Tudor at 5:47pm. The camera doesn't move. The light does."</div>
+    </div>
+
+    <div class="concept-grid">
+      <div class="tie">
+        <h4>Brand tie-in</h4>
+        <h3>The archetypal Ridgewood home.</h3>
+        <p>The Tudor is the visual shorthand for Bergen County luxury. Christie's and Sotheby's both lead with architectural stills — this concept says "we play in that register" without claiming to be them. Strongest with the English tagline; lands more softly in Spanish.</p>
+        <div class="line">"Bergen County, brought home."</div>
+      </div>
+      <div class="prompt-stack">
+        <div class="prompt">
+          <div class="lab"><span>Gemini · Image Prompt</span><span>16:9 · 2K</span></div>
+          <p>Cinematic photograph of a stately 1920s Ridgewood-style Tudor home at golden hour (5:47pm in late spring), soft warm sunlight raking across stone-and-timber facade, leaded-glass bay window catching low light, a lush mature oak in the foreground, boxwood hedges and a single hydrangea bloom, one warm amber interior light just visible through the bay window, cinematic composition, shot on 50mm prime, f/2.8, Kodak Portra 400 film tone, editorial architectural photography style, moody earth palette (charcoal ink, warm bone, champagne gold accents), no people, 16:9 aspect ratio</p>
+        </div>
+        <div class="prompt motion">
+          <div class="lab"><span>Kling 3.0 · Motion Prompt</span><span>5 sec · 4K</span></div>
+          <p>Camera holds absolutely static on tripod. Golden-hour sunlight slowly rakes left-to-right across the stone facade over 5 seconds. The single warm interior light through the bay window turns on at the 3-second mark — a subtle amber pulse, not a flash. A few leaves drift imperceptibly in the foreground. The only real motion is light. <code>cfg_scale: 0.4</code></p>
+        </div>
+      </div>
+    </div>
+
+    <dl class="concept-meta">
+      <div class="meta-cell"><dt>Tone</dt><dd>Classic luxury</dd></div>
+      <div class="meta-cell"><dt>Risk</dt><dd>Borderline generic</dd></div>
+      <div class="meta-cell"><dt>Bilingual fit</dt><dd>EN-strong</dd></div>
+      <div class="meta-cell"><dt>Scroll-scrub</dt><dd>121 frames @ 24fps</dd></div>
+      <div class="meta-cell"><dt>Budget signal</dt><dd>$$</dd></div>
+    </dl>
+  </div>
+
+  <!-- CONCEPT 2 · RECOMMENDED -->
+  <div class="concept">
+    <div class="concept-head">
+      <div class="concept-num">II</div>
+      <div class="concept-title">
+        <h2>The <em>Threshold</em> · Walking Home</h2>
+        <div class="short">First-person POV. A brick path. A door ajar. Warm light spilling out.</div>
+      </div>
+      <div class="recommend-pill">Recommended</div>
+    </div>
+
+    <div class="concept-visual vis-2">
+      <div class="vis-label">"The home you were waiting for — in the moment you finally arrive."</div>
+    </div>
+
+    <div class="concept-grid">
+      <div class="tie">
+        <h4>Brand tie-in</h4>
+        <h3>The emotional center of the pitch.</h3>
+        <p>This concept maps 1:1 onto the bilingual brand. In Spanish — <em>"la casa que esperabas"</em> — literally means "the home you were waiting for." The threshold moment IS the copy. Implied motion (walking toward) doubles as a metaphor for the client journey. No architectural cliché; no agent in frame. Just the moment a home becomes home.</p>
+        <div class="line">"Bergen County, la casa que esperabas."</div>
+      </div>
+      <div class="prompt-stack">
+        <div class="prompt">
+          <div class="lab"><span>Gemini · Image Prompt</span><span>16:9 · 2K</span></div>
+          <p>First-person POV photograph walking up a brick herringbone path toward the front porch of a stately Ridgewood Colonial, early evening (6:15pm), lush blue hydrangea and clipped boxwood hedges flanking the path, the white six-panel front door slightly ajar with warm golden interior light spilling out across the porch floorboards, a single brass lantern glowing to the left of the door, cinematic composition, shot on 35mm, shallow depth of field, Kodak Portra 400 film grade, editorial atmosphere, champagne-gold tonal wash, 16:9, no people visible in frame, grounded and intimate mood</p>
+        </div>
+        <div class="prompt motion">
+          <div class="lab"><span>Kling 3.0 · Motion Prompt</span><span>5 sec · 4K</span></div>
+          <p>Smooth slow forward dolly at hip-height camera, approximately 1.5 feet of forward movement over 5 seconds — feels like the last few steps before reaching a door. The door remains ajar and unchanging. Hydrangea leaves tremble gently in a quiet breeze. The warm interior light pulses imperceptibly brighter at the 3-second mark. Brass lantern flickers once, barely. End frame holds for 0.5 sec. <code>cfg_scale: 0.5</code></p>
+        </div>
+      </div>
+    </div>
+
+    <dl class="concept-meta">
+      <div class="meta-cell"><dt>Tone</dt><dd>Intimate luxury</dd></div>
+      <div class="meta-cell"><dt>Risk</dt><dd>Low — highly differentiated</dd></div>
+      <div class="meta-cell"><dt>Bilingual fit</dt><dd>Perfect — EN + ES</dd></div>
+      <div class="meta-cell"><dt>Scroll-scrub</dt><dd>121 frames @ 24fps</dd></div>
+      <div class="meta-cell"><dt>Budget signal</dt><dd>$$$</dd></div>
+    </dl>
+  </div>
+
+  <!-- CONCEPT 3 -->
+  <div class="concept">
+    <div class="concept-head">
+      <div class="concept-num">III</div>
+      <div class="concept-title">
+        <h2>Keys on <em>Marble</em></h2>
+        <div class="short">Overhead still life. New keys. A coffee cup. Morning light.</div>
+      </div>
+    </div>
+
+    <div class="concept-visual vis-3">
+      <div class="vis-label">"The first morning in a home that is now yours."</div>
+    </div>
+
+    <div class="concept-grid">
+      <div class="tie">
+        <h4>Brand tie-in</h4>
+        <h3>The payoff of the long relationship.</h3>
+        <p>This lands on Step 12 of the SD Method: "The Long Relationship." The closing-day emotion without the agent in frame. The keyring is Champagne — brand color, embedded literally in the shot. Lighter and more intimate than #1 or #2; reads as modern luxury rather than traditional. Strongest if we want the hero to feel like "after" rather than "before."</p>
+        <div class="line">"The keys. The coffee. The long relationship."</div>
+      </div>
+      <div class="prompt-stack">
+        <div class="prompt">
+          <div class="lab"><span>Gemini · Image Prompt</span><span>16:9 · 2K</span></div>
+          <p>Overhead cinematic still-life photograph on a white Carrara marble kitchen island, a new brass house-key set with a small champagne-gold keyring resting on a handwritten welcome note in navy ink, a white ceramic coffee cup with gentle steam rising, a single sprig of eucalyptus beside the cup, soft morning light streaming from the left edge of frame creating long soft shadows, shallow depth of field, editorial still-life photography aesthetic (Kinfolk / Cereal magazine style), Kodak Portra 400 film grade, 16:9, minimalist composition, no people</p>
+        </div>
+        <div class="prompt motion">
+          <div class="lab"><span>Kling 3.0 · Motion Prompt</span><span>5 sec · 4K</span></div>
+          <p>Slow downward push from slightly high-angle overhead — 1 foot of camera movement over 5 seconds, as if a person is leaning in over the counter. Steam from the coffee cup curls slowly and continuously upward. Morning light shifts imperceptibly warmer across the note paper from left to right. Eucalyptus sprig stays absolutely still. Everything is slow and deliberate. <code>cfg_scale: 0.5</code></p>
+        </div>
+      </div>
+    </div>
+
+    <dl class="concept-meta">
+      <div class="meta-cell"><dt>Tone</dt><dd>Modern intimate</dd></div>
+      <div class="meta-cell"><dt>Risk</dt><dd>May read "lifestyle", not "real estate"</dd></div>
+      <div class="meta-cell"><dt>Bilingual fit</dt><dd>Universal</dd></div>
+      <div class="meta-cell"><dt>Scroll-scrub</dt><dd>121 frames @ 24fps</dd></div>
+      <div class="meta-cell"><dt>Budget signal</dt><dd>$$</dd></div>
+    </dl>
+  </div>
+
+</section>
+
+</div>
+
+<section class="decision">
+  <div class="container">
+    <h4>Checkpoint 2 · Pick one</h4>
+    <div class="rec">Recommendation: Concept II — The Threshold</div>
+    <h2>It's the only one where the <em>Spanish copy</em> becomes the frame.</h2>
+    <p>"La casa que esperabas" — "the home you were waiting for" — is literally the threshold moment. No architectural cliché, no agent in frame, implied motion that mirrors the client journey. Both Kling 3.0 and Seedance 2.0 will render it in parallel so we pick the winner frame-for-frame.</p>
+    <p style="margin-top:8px;font-size:14px;color:rgba(245,241,234,0.5);letter-spacing:0.1em">Reply with 1, 2, or 3 — or a modification request.</p>
+  </div>
+</section>
+
+<div class="container">
+<footer>
+  <p>Phase 3 · Hero Concepts · VioX AI · Cinematic Design Studio</p>
+  <p style="margin-top:6px">For Sarah De Jesus · The SD Group · NJ #2669265</p>
+  <div class="sig">— Bergen County, brought home.</div>
+</footer>
+</div>
+
+</body>
+</html>

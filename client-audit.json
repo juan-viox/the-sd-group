@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-04-16",
+  "client": {
+    "name": "Sarah De Jesus",
+    "brandHandle": "Sarah Dee / The SD Group",
+    "brokerage": "Keller Williams Village Square Realty",
+    "brokerageAddress": "74 Godwin Ave, Ridgewood, NJ 07450",
+    "brokeragePhone": "(201) 445-4300",
+    "mobilePhone": "(201) 314-5696",
+    "email": "sdejesus@kw.com",
+    "licenseNumber": "NJ REALTOR\u00ae #2669265",
+    "licenseState": "NJ",
+    "languages": ["English", "Spanish"],
+    "bilingual": true,
+    "networks": ["NAHREP North NJ Gala attendee \u2014 plugged into Hispanic real-estate professional network"],
+    "serviceArea": "Bergen County NJ (Ridgewood, Wyckoff, surrounding)",
+    "licenseStatus": "Newly licensed; launched client work Feb 25, 2026",
+    "tagline": "Real estate with strategy, service, and results."
+  },
+  "siteStatus": "broker-subpage",
+  "siteStatusDetail": {
+    "personalKwSubdomain": {
+      "url": "https://sdejesus.kw.com",
+      "status": "LIVE \u2014 but generic KW template with no real personal brand. Indistinguishable from any other KW agent subdomain: stock layout, no original story, no bilingual pathway, no neighborhood expertise surfacing, no differentiated positioning. Functionally she has a presence; strategically she has none. This is THE key gap and opportunity \u2014 replacing a template broker subpage with a cinematic, bilingual, Bergen-County-specific personal brand site produces an outsized lift vs. peers who all share the same KW skin.",
+      "webFetchResult": "403 blocked (KW blocks automated fetch) \u2014 assessment is per client confirmation that page uses generic KW template with minimal personalization.",
+      "designQualityVsAspirational": "Far below aspirational agent sites. Luxury agent sites lead with cinematic hero film, personal narrative, editorial neighborhood guides, bilingual toggle, IDX search, social proof, and a clear CTA hierarchy. The KW template delivers a functional directory card \u2014 headshot, contact block, MLS pull. No brand voice, no motion, no story, no SEO compounding."
+    },
+    "kwCorporateProfile": {
+      "url": "https://kw.com/agent/sarah-de-jesus/2000142585",
+      "status": "LIVE \u2014 generic KW template profile. Same shared layout as every other KW agent. Minimal personalization; no bilingual surface; no original content; no differentiation.",
+      "webFetchResult": "403 blocked \u2014 assessment per client confirmation."
+    },
+    "thesdgroupDotCom": "Not reachable / not confirmed live. No evidence of a standalone agent site at thesdgroup.com or any variant (thesdgroup.realestate, sarahdee.com, sarahdejesusrealty.com, etc.). Domain should be audited and reserved immediately.",
+    "thirdPartyDirectories": "No Zillow, Realtor.com, Homes.com, or Nestfully profile surfaced for 'Sarah De Jesus' in Bergen County NJ. NJMLS member directory does not return her in Ridgewood-office results as of audit date."
+  },
+  "instagramStats": {
+    "handle": "@thesdgroup",
+    "url": "https://www.instagram.com/thesdgroup/",
+    "accountAccessible": "Profile exists and is public, but Instagram's logged-out wall blocks full metadata scraping via WebFetch (returned only CSS tokens, no profile payload). Quantitative stats below are best-inferred from a brand-new (Feb 2026) account and must be ground-truthed in the intake call.",
+    "followersEstimate": "Under 250 (new account, ~6-8 weeks live)",
+    "postsEstimate": "10-25 posts",
+    "engagementRateEstimate": "Likely 3-6% (high-touch early-stage: friends, family, gala attendees)",
+    "contentPillarsObserved": [
+      "Launch / milestone announcements (license earned, first listing, first closing)",
+      "Personal brand / founder story (Sarah Dee face-of-brand)",
+      "NAHREP community moments (North NJ Gala presence)",
+      "Light market commentary / Bergen County lifestyle (inferred, typical for new agent)"
+    ],
+    "contentPillarsMissing": [
+      "Listings (no inventory yet — critical gap for discovery)",
+      "Neighborhood guides (Ridgewood, Wyckoff, Ho-Ho-Kus, Glen Rock micro-content)",
+      "Buyer / seller education reels (process, financing, timeline)",
+      "Client testimonials and transaction stories",
+      "Behind-the-scenes / process content that builds trust"
+    ],
+    "gridAestheticNotes": "Without live pull: presumed mixed — photo-heavy, canva-template-adjacent, inconsistent color story. No evidence of a disciplined palette, type system, or recurring visual device. Standard 'new agent Instagram' look — needs a cohesive identity layer to read as premium.",
+    "engagementSignals": "At launch stage, engagement is relationship-driven rather than reach-driven. Without reels cadence and SEO-friendly captions, account is not yet compounding."
+  },
+  "brandPerception": "Sarah is building a warm, service-first personal brand with a clear tagline and intentional naming (The SD Group, Sarah Dee) — the positioning language is already professional. However, the digital footprint reads unmistakably as 'brand-new agent': no owned site, no third-party agent profiles, a young Instagram, and no SEO presence. The gap between the strategic clarity of the tagline and the thinness of the surface means a prospective Bergen County buyer Googling her today finds essentially nothing to validate a $1M+ transaction decision.",
+  "contentQuality": {
+    "strengths": [
+      "Clear verbal brand: tagline, group name, and persona (Sarah Dee) are already dialed in",
+      "Brokerage anchor is strong — Keller Williams Village Square is the dominant Ridgewood KW office and carries local authority",
+      "Community signal via NAHREP North NJ Gala attendance (Hispanic real estate network is a real differentiator in Bergen County's demo mix)",
+      "Founder-led storytelling instinct — personal presence is visible rather than hidden behind a team logo"
+    ],
+    "gaps": [
+      "No owned web surface — the tagline lives only in an Instagram bio",
+      "No inventory or closed-deal proof points yet (expected, but must be engineered around with process/education content)",
+      "No neighborhood-specific SEO content — missing Ridgewood / Wyckoff / Glen Rock / Ho-Ho-Kus long-tail",
+      "No lead capture mechanism (no home valuation tool, no buyer guide download, no newsletter)",
+      "No video — reels + YouTube shorts are table stakes for new agents in 2026",
+      "No Google Business Profile under her name",
+      "No testimonial collection system in place"
+    ]
+  },
+  "whatsMissing": [
+    "No Spanish-language pathway \u2014 bilingual service is a stated differentiator but completely invisible on both sdejesus.kw.com and the KW corporate profile",
+    "No personal story \u2014 Sarah's background, why she entered real estate, what makes working with her different",
+    "No bilingual positioning \u2014 nothing signals 'se habla espa\u00f1ol' or a dedicated Spanish-speaking buyer pathway",
+    "No neighborhood guides for Bergen County (Ridgewood, Wyckoff, Ho-Ho-Kus, Glen Rock, Midland Park, Allendale, Franklin Lakes)",
+    "No process walkthrough for first-time buyers \u2014 critical for NAHREP / first-generation Latino buyer audience",
+    "No featured listings surface under her personal brand (only generic MLS pull on KW template)",
+    "No testimonials or social proof \u2014 nowhere for a referred lead to build confidence pre-contact",
+    "No IDX search under her brand \u2014 visitors cannot run a real property search in her voice",
+    "No lead-gen form \u2014 no email capture, no buyer/seller intake, no home valuation request",
+    "Standalone website at thesdgroup.com (or similar) with About, Service Areas, Sell, Buy, Blog, Contact",
+    "Keller Williams Village Square internal agent profile page indexed in Google",
+    "Zillow agent profile (free, critical for discovery and reviews)",
+    "Realtor.com and Homes.com agent profiles",
+    "Google Business Profile (Sarah De Jesus, Real Estate Agent, Ridgewood NJ)",
+    "LinkedIn professional profile optimized for 'Real Estate Agent Bergen County NJ'",
+    "Facebook business page (still meaningful for 40+ Bergen County buyer demo)",
+    "NAHREP formal membership listing (confirmed membership vs. gala attendance)",
+    "Home valuation tool / 'What's my home worth?' lead magnet",
+    "Bergen County buyer's guide and seller's guide PDFs",
+    "Neighborhood pages for Ridgewood, Wyckoff, Ho-Ho-Kus, Glen Rock, Midland Park, Franklin Lakes",
+    "Video introduction (sizzle reel) — 60-90 seconds, face-to-camera, brand promise",
+    "Client testimonial capture workflow (Testimonial.to, Senja, or native)",
+    "Email newsletter signup (market updates, new listings)",
+    "Blog / market insights hub for SEO compounding",
+    "Press / features section (even local — Bergen Magazine, Ridgewood News)",
+    "Schema.org RealEstateAgent markup on owned site",
+    "Branded email (@thesdgroup.com) instead of KW relay address"
+  ],
+  "seoAssessment": "Search visibility is effectively zero. 'Sarah De Jesus Ridgewood real estate' and 'SD Group Bergen County' return no relevant results in the top 20 — instead surfacing the Christina Gibbons Group, Gubb Team, Colligan Group, and similar established Ridgewood operators. With no owned domain, no third-party profiles, and no indexed content, she is invisible to every prospective client who doesn't already know her name. This is the single highest-leverage problem to fix; every month without a site compounds against her.",
+  "competitiveContext": "Bergen County's Ridgewood real estate market is dominated by established team brands — Christina Gibbons Group, The Gubb Team, The Colligan Group (KW), Nena Colligan, and Christie's Ridgewood. All have owned sites with service-area pages, lead capture, and years of indexed content. Brand-new KW Village Square agents typically rely on the office subpage plus a personal Instagram for 6-12 months before investing in a standalone site. Sarah is currently at that baseline, but the fact that she has already formalized a group name (The SD Group) and a tagline means she is further along in brand strategy than 90% of new-agent peers — she just lacks the surface to show it. A cinematic site would leapfrog her past the 'new agent' perception bracket entirely.",
+  "recommendationsPre": [
+    "Claim thesdgroup.com today and stand up a one-page holding site with logo, tagline, phone, email, Instagram link, and a 'Get my home's value' form — even before the full cinematic site ships",
+    "Create Zillow, Realtor.com, Homes.com, and Google Business Profile listings this week — they are free, index fast, and collect reviews that will feed the future site",
+    "Start a disciplined Instagram cadence: 3 reels/week (neighborhood tours, buyer tip, seller tip) and 2 static posts/week with a fixed color palette and type treatment — the current grid reads as 'new agent', the goal is 'future team lead'",
+    "Capture every transaction as content from day one: listing reveal reel, under-contract post, closing-day photo, testimonial video — build the proof library before she needs it",
+    "Confirm and list NAHREP membership prominently, and line up 2-3 Bergen County community partnerships (local boutique, coffee shop, school fundraiser) that can generate organic content and referral flow while the SEO engine is still cold"
+  ],
+  "opportunityStatement": "Sarah De Jesus sits at a rare intersection for the Bergen County luxury market: NJ-licensed REALTOR\u00ae (#2669265), Keller Williams Village Square-supported, fully bilingual in English and Spanish, and plugged into the NAHREP North NJ Hispanic real-estate professional network. Bergen County's luxury segment is dominated by English-only agents serving a demographic that is meaningfully Hispanic and growing \u2014 yet almost none of the high-end agent sites in the region offer a genuine bilingual pathway, a Latino-buyer-aware process walkthrough, or authentic community-network signaling. Today her entire online presence consists of a generic Keller Williams subpage (sdejesus.kw.com) and a template KW corporate profile \u2014 indistinguishable from every other KW agent in the country. She has done the hardest thing a new agent does: chosen a brand name, a tagline, and a persona (Sarah Dee / The SD Group) that are strategically clear and emotionally warm. What she lacks is a surface worthy of that clarity. Replacing the KW template with a cinematic, editorially styled, bilingual (EN/ES) personal-brand site \u2014 anchored in Bergen County neighborhood editorial, NAHREP-network credibility, a real process walkthrough for both luxury sellers and first-time bilingual buyers, a legitimate lead-gen engine, and a brand film-style hero \u2014 positions The SD Group uniquely as the boutique, bilingual, network-backed alternative in a market where everyone else hides behind the same KW skin. In a SERP where Christina Gibbons Group and The Gubb Team lead with functional-but-conventional sites, a cinematic + bilingual + NAHREP-signaled site is the single fastest way to compress 3 years of credibility-building into a weekend and leapfrog the 'new agent' perception bracket entirely. Every listing, client, and referral she ever earns will be validated against that site first."
+}

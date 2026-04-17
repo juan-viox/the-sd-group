@@ -1,0 +1,319 @@
+{
+  "generatedAt": "2026-04-16",
+  "agent": "Agent B — Design Pattern Analysis",
+  "client": {
+    "name": "The SD Group",
+    "lead": "Sarah De Jesus",
+    "brokerage": "Keller Williams Village Square",
+    "market": "Ridgewood / Bergen County, NJ",
+    "positioning": "New premium personal brand for a Bergen County luxury agent"
+  },
+  "sitesAnalyzed": [
+    {
+      "tier": 1,
+      "site": "ryanserhant.com",
+      "heroStyle": "Full-bleed autoplay video hero with stacked display type and dual CTAs",
+      "colorPalette": {
+        "primary": "#111275",
+        "accent": "#D2DCF5",
+        "neutralDark": "#0D1321",
+        "neutralMid": "#858FAA",
+        "text": "#222222"
+      },
+      "navStyle": "Fixed top nav, logo-left, utility nav right; collapses to icon menu on mobile; transparent over hero, subtle solid on scroll",
+      "typography": {
+        "display": "Custom bold geometric sans (Serhant. wordmark-derived)",
+        "body": "Clean neo-grotesque sans"
+      },
+      "sections": ["video-hero", "netflix-promo", "metrics-grid", "thought-leadership", "press-logos", "speaking", "testimonials-tabbed", "books-grid", "sellit-coaching", "youtube-cards", "tv-shows", "ventures", "press", "social-metrics", "footer-subscribe"],
+      "interactions": ["video autoplay with poster fallback", "tabbed testimonial carousel", "logo marquee", "hover-lift on content cards", "scroll-triggered fades"],
+      "ctaStrategy": "Dual CTAs in hero: 'Contact Ryan' (primary) + 'I'm New to Ryan' (secondary); Netflix 'Watch Now' as entertainment hook",
+      "photographyStyle": "Editorial portrait-led; Ryan in tailored suits + NYC skyline; cinematic Netflix stills; aspirational lifestyle",
+      "leadFlow": "Interest-segmented newsletter (news / sales tips / personal vision) plus persistent Contact CTA",
+      "mobileQuality": 9,
+      "designScore": 9,
+      "takeaway": "Personality-forward brand: the agent IS the product. Heavy editorial cadence, media-empire feel."
+    },
+    {
+      "tier": 1,
+      "site": "theagencyre.com",
+      "heroStyle": "Full-viewport autoplay slider (5s) over luxury property imagery with search bar overlay",
+      "colorPalette": {
+        "primary": "#ED2127",
+        "accentDark": "#E01B17",
+        "neutralBlack": "#000000",
+        "neutralGray": "#262626",
+        "surface": "#E0E0E0"
+      },
+      "navStyle": "Burger-only nav (BUY/SELL/RENT/AGENTS/REGIONS/SERVICES); bold red wordmark; minimal chrome",
+      "typography": {
+        "display": "Times-style serif (italic accents), 64px h1",
+        "body": "System sans stack"
+      },
+      "sections": ["hero-slider-search", "global-regions-carousel", "featured-listings", "art-house-module", "magazine-promo", "new-developments", "press", "blog", "lets-connect-form", "footer"],
+      "interactions": ["autoplay slider with prev/next", "OneSearch autocomplete", "lazy-load images", "Ajax content swaps"],
+      "ctaStrategy": "'Explore Listings' under hero search; mid-page 'Let's Connect' multi-field form with agent dropdown",
+      "photographyStyle": "Architectural grandeur: Malibu, Marbella, Cancun, European châteaux — wide-lens, golden-hour",
+      "leadFlow": "'Let's Connect' form captures name/email/phone/preferred-time/address/agent-select; routes to agent dashboard",
+      "mobileQuality": 8,
+      "designScore": 9,
+      "takeaway": "Red-on-black is a signature — brand equity through one hero color. Magazine/editorial framing elevates beyond MLS."
+    },
+    {
+      "tier": 1,
+      "site": "sothebysrealty.com",
+      "heroStyle": "Editorial full-bleed photography hero with search pill; rotating featured estates",
+      "colorPalette": {
+        "primary": "#002349",
+        "accent": "#B49F6A",
+        "neutralWhite": "#FFFFFF",
+        "neutralCream": "#F5F0E8",
+        "text": "#1A1A1A"
+      },
+      "navStyle": "Thin fixed top bar with centered wordmark, utility links flanking; stays solid white",
+      "typography": {
+        "display": "Serif wordmark (Sotheby's custom)",
+        "body": "Benton Sans / modern humanist sans"
+      },
+      "sections": ["search-hero", "curated-collections", "featured-properties-grid", "global-offices-map", "editorial-journal", "new-developments", "concierge-auctions-link", "footer"],
+      "interactions": ["map-driven office locator", "lazy-loaded property cards", "subtle image zoom on hover"],
+      "ctaStrategy": "Primary 'Search' inline in hero; secondary 'Contact an Agent' contextual throughout",
+      "photographyStyle": "Museum-grade architectural + landscape photography; desaturated, editorial, highly curated",
+      "leadFlow": "Agent-match inquiry forms per-listing; newsletter opt-in in footer",
+      "mobileQuality": 9,
+      "designScore": 10,
+      "takeaway": "Navy + gold = unimpeachable luxury. Quiet typography, editorial restraint — they never shout."
+    },
+    {
+      "tier": 1,
+      "site": "elliman.com (Douglas Elliman)",
+      "heroStyle": "Large search-led hero 'Where do you want to go?' over rotating lifestyle stills",
+      "colorPalette": {
+        "primary": "#003057",
+        "accent": "#C9A96E",
+        "neutralWhite": "#FFFFFF",
+        "neutralGray": "#F2F2F2",
+        "text": "#111111"
+      },
+      "navStyle": "Sticky top nav: Buy/Rent/Sell/Agents + secondary New Development / World of Elliman; solid white",
+      "typography": {
+        "display": "Classic serif (Elliman wordmark)",
+        "body": "Neo-grotesque sans"
+      },
+      "sections": ["search-hero", "view-exclusives", "editorial-curated-content", "new-development", "agents-spotlight", "markets-grid", "footer-multi-state"],
+      "interactions": ["search autocomplete", "content carousels", "fade-in sections"],
+      "ctaStrategy": "'Start Your Search' primary; 'View Our Exclusives' secondary hook into curated inventory",
+      "photographyStyle": "Lifestyle + architectural; aspirational but approachable; US coastal palettes",
+      "leadFlow": "Search-first funnel → property detail → agent inquiry form; editorial newsletter",
+      "mobileQuality": 8,
+      "designScore": 8,
+      "takeaway": "Heritage luxury playbook — navy, gold, search-first. Safe but effective."
+    },
+    {
+      "tier": 1,
+      "site": "compass.com",
+      "heroStyle": "Full-width hero image with dark top gradient + search bar; text overlay",
+      "colorPalette": {
+        "primary": "#000000",
+        "accent": "#0064E5",
+        "neutralDark": "#171717",
+        "neutralLight": "#F3F3F3",
+        "surface": "#FFFFFF"
+      },
+      "navStyle": "Fixed transparent-to-solid 48px nav; hamburger drawer (286px) on mobile with accordions",
+      "typography": {
+        "display": "Variable-weight sans (Compass custom sans)",
+        "body": "Same system, lighter weights"
+      },
+      "sections": ["search-hero", "compass-exclusives", "mortgage-prequal", "concierge-benefits", "popular-city-listings", "regional-market-selector", "footer"],
+      "interactions": ["nav color shift on scroll/hover (#0064E5)", "drawer accordions", "search autocomplete", "smooth hover transitions"],
+      "ctaStrategy": "'See What I Qualify For' (mortgage prequal via Rocket); search-first primary action",
+      "photographyStyle": "Residential aspirational with vertical composition for overlay",
+      "leadFlow": "Mortgage calculator → prequal capture; agent search; city-page retargeting",
+      "mobileQuality": 9,
+      "designScore": 8,
+      "takeaway": "Tech-company feel applied to real estate. Blue accent = differentiator in a sea of navy/gold."
+    },
+    {
+      "tier": 1,
+      "site": "aaronkirman.com",
+      "heroStyle": "Immersive content-opening slider with video backgrounds + layered imagery",
+      "colorPalette": {
+        "primary": "#141414",
+        "accent": "#9E8B63",
+        "surface": "#FAFAFA",
+        "neutralMid": "#919191",
+        "neutralLight": "#C3C3C3"
+      },
+      "navStyle": "Centered-logo transparent nav, backdrop-blur on scroll; uppercase links with 2px tracking; side-drawer on mobile",
+      "typography": {
+        "display": "Didot LT Std (serif)",
+        "body": "Gilroy (geometric sans)"
+      },
+      "sections": ["opening-slider", "stats-showcase", "featured-properties-slider", "bio-marquee", "press-coverage", "testimonials", "contact-modal"],
+      "interactions": ["flip cards", "property slide-up on hover", "backdrop-blur layers", "staggered stat fade-ins", "smooth scroll"],
+      "ctaStrategy": "'Contact Us' with arrow icon, backdrop-blur + gold hover; persistent mobile contact widget",
+      "photographyStyle": "Grayscale-filtered luxury with selective color; dramatic black-to-transparent gradients; 16:10 ratios",
+      "leadFlow": "Modal contact form over dark overlay; bottom-border-only inputs (minimalist)",
+      "mobileQuality": 9,
+      "designScore": 10,
+      "takeaway": "Gold-standard for a SOLO luxury agent. Didot + Gilroy + charcoal/gold is the exact reference for SD Group."
+    },
+    {
+      "tier": 1,
+      "site": "joshflagg.com",
+      "heroStyle": "Full-screen video hero with property search bar + dark overlay",
+      "colorPalette": {
+        "primary": "#000000",
+        "accent": "#7B7365",
+        "surface": "#F0ECE6",
+        "text": "#2D2D2D",
+        "neutralWhite": "#FFFFFF"
+      },
+      "navStyle": "Fixed serif-logo header; bordered 'Contact Us' button; smooth padding transition on scroll",
+      "typography": {
+        "display": "Cormorant Garamond (serif) — h1:64/h2:48/h3:30",
+        "body": "Lato 16px"
+      },
+      "sections": ["video-search-hero", "featured-carousel-50-50", "properties-carousel", "testimonials-slider", "stats", "press-carousel", "cta-box", "footer-newsletter"],
+      "interactions": ["56px circular carousel controls", "cream hover fills", "property info fade-in panels", "search dropdown over dark scrim"],
+      "ctaStrategy": "'Contact Us' outline button repeated throughout; newsletter in footer",
+      "photographyStyle": "Beverly Hills / LA estates in 50-50 splits; warm, editorial, luxury architectural",
+      "leadFlow": "Newsletter email + arrow; contact modal with disclaimers",
+      "mobileQuality": 9,
+      "designScore": 9,
+      "takeaway": "Cormorant + taupe/cream = the 'serene luxury' palette. Directly applicable to a female-led NJ luxury brand."
+    },
+    {
+      "tier": 1,
+      "site": "nestseekers.com",
+      "heroStyle": "Full-screen fade-transition carousel of named estate listings",
+      "colorPalette": {
+        "primary": "#3C404D",
+        "accent": "#A9D6D1",
+        "surface": "#FFFFFF",
+        "text": "#1A1A1A"
+      },
+      "navStyle": "Horizontal top bar with broad dropdown for global markets + service categories",
+      "typography": {
+        "display": "Roboto (sans)",
+        "body": "Roboto"
+      },
+      "sections": ["hero-carousel", "new-developments", "featured-properties", "media-entertainment", "careers", "publications-yachts-jets", "market-reports", "footer"],
+      "interactions": ["Swiper carousels with pause-on-interact", "CSS max-height submenus"],
+      "ctaStrategy": "'Explore' buttons to listings/developments/careers; Register/Sign In and Search",
+      "photographyStyle": "High-res lifestyle interiors + waterfront; professional architectural",
+      "leadFlow": "Footer newsletter + per-listing agent inquiry",
+      "mobileQuality": 7,
+      "designScore": 7,
+      "takeaway": "Broad global brand feel. Teal accent is interesting but typography is too generic for a personal brand reference."
+    },
+    {
+      "tier": 2,
+      "site": "kwvillage-square.com (KW Village Square)",
+      "heroStyle": "KW-templated hero with local-market photography and property search",
+      "colorPalette": {
+        "primary": "#CC0000",
+        "accent": "#B59458",
+        "neutralDark": "#1F1F1F",
+        "surface": "#FFFFFF",
+        "text": "#333333"
+      },
+      "navStyle": "Standard KW Command-driven top nav with Buy/Sell/Search/Agents/About; sticky on scroll",
+      "typography": {
+        "display": "Gotham / Proxima Nova style sans (KW brand)",
+        "body": "Same sans family"
+      },
+      "sections": ["search-hero", "featured-listings", "agent-directory", "market-stats", "testimonials", "contact-form", "footer"],
+      "interactions": ["search autocomplete", "listing card hover", "modest fade-ins"],
+      "ctaStrategy": "'Search' + 'Contact an Agent' — functional, brokerage-default",
+      "photographyStyle": "Generic stock + local MLS photography; inconsistent quality",
+      "leadFlow": "Standard KW lead form → CRM/Command",
+      "mobileQuality": 6,
+      "designScore": 5,
+      "takeaway": "Brokerage floor — SD Group needs to visually leapfrog the parent-office template. Use this only as the compliance baseline to beat."
+    },
+    {
+      "tier": 2,
+      "site": "sothebysrealty.com/prominentpropertiessir (Prominent Properties Sotheby's, Tenafly NJ)",
+      "heroStyle": "Sotheby's-franchise hero with local Bergen/Hudson estate photography + search",
+      "colorPalette": {
+        "primary": "#002349",
+        "accent": "#B49F6A",
+        "surface": "#F5F0E8",
+        "text": "#1A1A1A"
+      },
+      "navStyle": "Sotheby's global template — thin white sticky nav, wordmark centered",
+      "typography": {
+        "display": "Sotheby's serif wordmark",
+        "body": "Benton Sans / humanist sans"
+      },
+      "sections": ["search-hero", "local-featured-listings", "about-office", "agents-grid", "community-pages", "editorial-journal", "footer"],
+      "interactions": ["subtle hover zooms", "search autocomplete"],
+      "ctaStrategy": "'Contact' / 'View Listing' — restrained, inventory-driven",
+      "photographyStyle": "Franchise-consistent editorial architectural; strong in Alpine/Saddle River estates",
+      "leadFlow": "Per-listing agent contact + office-wide inquiry",
+      "mobileQuality": 8,
+      "designScore": 8,
+      "takeaway": "The direct NJ luxury competitor. SD Group must differentiate with personality — Sotheby's template is strong but agent-anonymous."
+    }
+  ],
+  "designRecommendations": {
+    "recommendedVibe": "Editorial Luxury",
+    "rationale": "Sarah De Jesus is a new brand entering a Bergen County market dominated by Sotheby's franchises (Prominent Properties, Christie's) and corporate KW templates. 'Ethereal Glass' reads too tech/proptech for a relationship-based residential agent; 'Soft Structuralism' is too austere for a warm, referral-driven female-led brand. 'Editorial Luxury' — think Aaron Kirman + Josh Flagg + a hint of Sotheby's restraint — positions Sarah as the curated, magazine-grade alternative to both the template brokerages and the loud Compass/Serhant tech aesthetic. It signals: quiet confidence, editorial craft, Ridgewood-appropriate taste, and a personal brand worth a $2M+ listing.",
+    "paletteDirection": [
+      { "name": "Ink", "hex": "#141414", "role": "Primary text + hero overlay" },
+      { "name": "Bone", "hex": "#F5F1EA", "role": "Page surface / editorial canvas" },
+      { "name": "Champagne", "hex": "#B59766", "role": "Accent — rules, small CTA borders, hover underline" },
+      { "name": "Moss", "hex": "#3A4A3F", "role": "Secondary accent — Bergen County botanical tie-in, section dividers" },
+      { "name": "Soft White", "hex": "#FFFFFF", "role": "Card surface, typography over image" }
+    ],
+    "typographyPairing": {
+      "display": "Fraunces (variable serif, slight optical warmth, supports both editorial display and body-ish subheads)",
+      "body": "Geist (modern neo-grotesque sans with excellent numeric tabular for listing data)",
+      "rationale": "Fraunces gives the Didot/Cormorant luxury register without being a 1:1 Josh Flagg clone; Geist is crisp enough to sit beside listing prices, sq ft, and neighborhood data without feeling dated. Safe fallback pair: Editorial New + Outfit."
+    },
+    "heroConcept": "A slow, cinematic 4K curtain-reveal of a Ridgewood Tudor/Colonial at golden hour, with 'Sarah De Jesus' and a single editorial tagline ('Bergen County, Brought Home.') dissolving into view as the user scrolls — no search bar, no stock drone, just presence.",
+    "sectionOrder": [
+      "hero",
+      "text-mask",
+      "about",
+      "featured-listings",
+      "process",
+      "neighborhoods",
+      "testimonials",
+      "contact"
+    ],
+    "modulesToUse": {
+      "hero": "curtain-reveal",
+      "text-mask": "text-mask",
+      "about": "split-scroll",
+      "featured-listings": "horizontal-scroll",
+      "process": "sticky-stack",
+      "neighborhoods": "zoom-parallax",
+      "testimonials": "accordion-slider",
+      "contact": "spotlight-border",
+      "supporting": ["kinetic-marquee (press logos)", "cursor-reveal (bio image hover)", "svg-draw (signature mark)"]
+    },
+    "antiPatterns": [
+      "Generic stock drone shots of suburban cul-de-sacs — use real Ridgewood / Ho-Ho-Kus / Glen Rock property photography only",
+      "Corporate blue + white (KW Command default, Zillow) — it flattens the brand into brokerage noise",
+      "Lorem Ipsum / AI-generated testimonials — every quote must name a real client, town, and transaction type",
+      "Auto-playing music or voiceovers on page load — violates the 'quiet luxury' register",
+      "Hero search bar as the primary visual element — this is a personal brand, not an MLS portal",
+      "Inter / generic Google sans for display — instant AI-slop tell",
+      "Purple/violet gradients, nested translucent cards, and neon accent palettes",
+      "Carousel-of-everything homepage (Nest Seekers trap) — one idea per section, well-executed",
+      "MLS-iframe listing grids with inconsistent photo quality — only show curated, photographer-shot inventory",
+      "Red CTA buttons (avoid KW parent-brand collision)",
+      "Overuse of italics / script fonts to signal 'feminine luxury' — let typography restraint carry the elegance",
+      "Stat counters that animate on scroll with no context ('47 homes sold!' with no timeframe or market)"
+    ],
+    "referenceStack": {
+      "primary": "aaronkirman.com (structure, restraint, gold accent)",
+      "secondary": "joshflagg.com (serif display + taupe/cream warmth)",
+      "tertiary": "sothebysrealty.com (editorial cadence, photographic restraint)",
+      "avoid": "kwvillage-square.com (parent template), compass.com (too tech), nestseekers.com (too broad)"
+    }
+  }
+}

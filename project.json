@@ -1,0 +1,105 @@
+{
+  "client": {
+    "name": "The SD Group",
+    "slug": "the-sd-group",
+    "sourceUrl": "https://sdejesus.kw.com",
+    "kwProfileUrl": "https://kw.com/agent/sarah-de-jesus/2000142585",
+    "instagramUrl": "https://www.instagram.com/thesdgroup/",
+    "businessType": "real-estate",
+    "founder": "Sarah De Jesus",
+    "founderNickname": "Sarah Dee",
+    "role": "Licensed Real Estate Agent (REALTOR®)",
+    "brokerage": "Keller Williams Village Square Realty",
+    "marketCenter": "Keller Williams Village Square Realty",
+    "licenseNumber": "2669265",
+    "licenseState": "NJ",
+    "officeAddress": "74 Godwin Avenue, Ridgewood, NJ 07450",
+    "officePhone": "(201) 445-4300",
+    "mobilePhone": "(201) 314-5696",
+    "email": "sdejesus@kw.com",
+    "languages": ["English", "Spanish"],
+    "location": "Ridgewood, NJ",
+    "region": "Bergen County, New Jersey",
+    "serviceArea": ["Ridgewood", "Wyckoff", "Bergen County", "North Jersey"],
+    "tagline": "Real estate with strategy, service, and results.",
+    "launchContext": "Newly licensed, officially began client work 2/25/2026. Emphasis on intentional growth, systems, and relational service.",
+    "differentiators": [
+      "Bilingual service — English & Spanish (rare in luxury Bergen County segment)",
+      "Systems-driven preparation behind every transaction",
+      "KW Village Square support structure (contracts, compliance, marketing, TC)",
+      "Warm, refined, personal service with fresh-perspective energy"
+    ]
+  },
+  "brand": {
+    "vibeArchetype": "Editorial Luxury",
+    "aestheticSignals": ["black heart 🖤", "white heart 🤍", "minimal captions", "refined lowercase, emoji-accented"],
+    "colors": {
+      "ink": { "hex": "#141414", "role": "Primary text, hero overlay, footer" },
+      "deepInk": { "hex": "#0A0A0A", "role": "Hero video tint, darkest tone" },
+      "bone": { "hex": "#F5F1EA", "role": "Primary surface, editorial canvas" },
+      "champagne": { "hex": "#B59766", "role": "Single accent: rules, hover underlines, CTA borders, signature elements" },
+      "moss": { "hex": "#3A4A3F", "role": "Secondary accent: Bergen botanical tie-in, dividers, EN/ES toggle inactive" },
+      "softWhite": { "hex": "#FFFFFF", "role": "Card surfaces, typography over dark imagery" },
+      "dim": { "hex": "#6B6B6B", "role": "Muted text, meta-data, timestamps" },
+      "rule": { "hex": "rgba(20,20,20,0.12)", "role": "Hairline borders on light, dividers" }
+    },
+    "typography": {
+      "display": {
+        "family": "Fraunces",
+        "source": "Google Fonts",
+        "weights": [300, 400, 500, 600, 700],
+        "italic": true,
+        "variable": true,
+        "variationSettings": "opsz 9..144, SOFT 0..100",
+        "usage": "Headlines, section titles, founder name, editorial callouts"
+      },
+      "body": {
+        "family": "Geist",
+        "source": "Google Fonts",
+        "weights": [300, 400, 500, 600, 700],
+        "usage": "Body copy, navigation, UI labels, listing data (tabular nums)"
+      },
+      "scale": {
+        "h1": "clamp(56px, 8vw, 120px)",
+        "h2": "clamp(36px, 4.5vw, 64px)",
+        "h3": "clamp(24px, 2.2vw, 32px)",
+        "body": "17px / 1.75",
+        "meta": "13px / 0.2em tracking / uppercase"
+      }
+    },
+    "logoDescription": "SD monogram — interlocking serif S and D as a single inline SVG mark, referenced from <defs>. Wordmark 'THE SD GROUP' in Geist 500 letter-spacing 0.3em all-caps beneath (optional combo lockup). Color inherits via currentColor for theme adaptability. Nav size 44px monogram-only; footer size 64px full lockup.",
+    "logoVariants": [
+      { "name": "monogram", "size": "44px nav / 64px hero", "form": "SD interlocked serif" },
+      { "name": "lockup", "size": "footer / brand-card", "form": "SD monogram + THE SD GROUP wordmark" },
+      { "name": "favicon", "size": "32x32", "form": "Monogram inline SVG, Champagne on Ink" }
+    ],
+    "contentFile": "BRAND.md",
+    "languages": ["en", "es"],
+    "bilingualStrategy": "Every section has EN+ES copy. Toggle persists via localStorage. Default to EN with browser-language auto-detect for first visit. /es URL path for Spanish-canonical indexing."
+  },
+  "designControls": {
+    "DESIGN_VARIANCE": 6,
+    "MOTION_INTENSITY": 7,
+    "VISUAL_DENSITY": 3
+  },
+  "vibeArchetype": "Editorial Luxury",
+  "pipeline": {
+    "skill": "cinematic-design-studio",
+    "scope": "Full pipeline incl. bilingual voice agent",
+    "skippedPhases": ["Phase 1 — Stitch 2.0 (skipped per user)"],
+    "status": "phase-0-complete, moving to phase-2-brand-analysis",
+    "targetDomain": "thesdgroup.co",
+    "domainStatus": "Registered at Namecheap on 2026-04-17 (assumed owned by Juan/Sarah)",
+    "photoStrategy": "Instagram scrape blocked — fallback: editorial silhouette placeholder generated via Gemini in Phase 6. Sarah can drop pro headshots into site/assets/images/sarah-*.jpg post-launch and the site will pick them up.",
+    "credentialsDisplay": "Omit NAHREP; lead with bilingual EN/ES"
+  },
+  "content": {
+    "hashtags": ["#TheSDGroup", "#SarahDeJesus", "#RidgewoodNJ", "#BergenCountyRealEstate", "#KellerWilliamsVillageSquare"],
+    "signaturePosts": [
+      "Seashore at Long Branch open-house recap (14-unit new-construction, private elevators, rooftop ocean views)",
+      "Official KW onboarding — Realtor safety + professional standards",
+      "NAHREP North NJ Gala attendance",
+      "Preparation philosophy: studying contracts, learning systems, building strategy"
+    ]
+  }
+}

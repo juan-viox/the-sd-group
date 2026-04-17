@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SD Group — Cinematic Site Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414; --bone:#F5F1EA; --champagne:#B59766; --moss:#3A4A3F;
+  --white:#FFFFFF; --dim:#8a8070; --rule:rgba(20,20,20,0.12); --rule-strong:rgba(20,20,20,0.3);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Geist',system-ui,sans-serif;
+  background:var(--bone); color:var(--ink);
+  line-height:1.6; font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-0.02em;line-height:1.08;color:var(--ink)}
+h1{font-size:clamp(56px,8vw,120px);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 40}
+h2{font-size:clamp(36px,4.5vw,64px);font-weight:400;font-variation-settings:"opsz" 96}
+h3{font-size:clamp(24px,2.2vw,32px);font-weight:500}
+h4{font-size:13px;font-weight:500;font-family:'Geist',sans-serif;letter-spacing:0.25em;text-transform:uppercase;color:var(--champagne)}
+p{font-size:17px;line-height:1.75;color:rgba(20,20,20,0.82);max-width:68ch}
+em{font-style:italic;font-family:'Fraunces',serif}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--champagne);transition:color 0.3s}
+a:hover{color:var(--champagne)}
+.container{max-width:1280px;margin:0 auto;padding:0 56px}
+@media (max-width:768px){.container{padding:0 24px}}
+
+/* HERO */
+.hero{min-height:100dvh;display:flex;flex-direction:column;justify-content:space-between;padding:80px 0 60px;position:relative}
+.hero-top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim)}
+.hero-top .brand{font-family:'Fraunces',serif;font-size:18px;font-weight:400;color:var(--ink);letter-spacing:0;text-transform:none;font-style:italic}
+.hero-center{flex:1;display:flex;flex-direction:column;justify-content:center;gap:40px;padding:80px 0}
+.eyebrow{font-size:13px;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);font-weight:500}
+.hero h1{max-width:14ch}
+.hero h1 em{color:var(--champagne);font-weight:300}
+.hero-lede{font-size:22px;line-height:1.5;max-width:56ch;font-weight:300;color:rgba(20,20,20,0.78)}
+.hero-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;padding-top:40px;border-top:1px solid var(--rule-strong);font-size:13px;letter-spacing:0.08em}
+.hero-meta dt{text-transform:uppercase;color:var(--dim);margin-bottom:8px;font-size:11px;letter-spacing:0.18em}
+.hero-meta dd{font-family:'Fraunces',serif;font-size:18px;letter-spacing:-0.01em}
+
+/* SECTIONS */
+section{padding:140px 0;border-top:1px solid var(--rule)}
+.section-head{max-width:72ch;margin-bottom:80px}
+.section-head h2{margin:20px 0 24px}
+.section-head h2 em{color:var(--champagne)}
+.section-head .lede{font-size:20px;line-height:1.55;font-weight:300;color:rgba(20,20,20,0.72)}
+
+/* EXECUTIVE SUMMARY */
+.exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:120px;align-items:start}
+@media (max-width:900px){.exec-grid{grid-template-columns:1fr;gap:60px}}
+.exec-main{font-size:19px;line-height:1.8;color:rgba(20,20,20,0.9)}
+.exec-main p{font-size:19px;margin-bottom:24px;max-width:none}
+.exec-main p strong{color:var(--champagne);font-weight:500}
+.exec-aside{padding:48px;background:var(--ink);color:var(--bone);border-radius:2px}
+.exec-aside h4{color:var(--champagne);margin-bottom:24px}
+.exec-aside ul{list-style:none;padding:0}
+.exec-aside li{padding:16px 0;border-top:1px solid rgba(245,241,234,0.12);font-size:15px;line-height:1.5;display:flex;gap:16px;align-items:baseline}
+.exec-aside li:first-child{border-top:none;padding-top:0}
+.exec-aside li::before{content:'';display:inline-block;width:8px;height:8px;flex-shrink:0;border-radius:50%;background:var(--champagne);margin-top:8px}
+
+/* BEFORE/AFTER */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule-strong)}
+@media (max-width:768px){.ba-grid{grid-template-columns:1fr}}
+.ba-col{padding:56px 48px;position:relative}
+.ba-col.before{background:rgba(20,20,20,0.03);border-right:1px solid var(--rule-strong)}
+.ba-col.after{background:var(--ink);color:var(--bone)}
+.ba-col.after p,.ba-col.after li{color:rgba(245,241,234,0.85)}
+.ba-col.after h3{color:var(--bone)}
+.ba-label{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;font-weight:500;margin-bottom:24px}
+.before .ba-label{color:var(--dim)}
+.after .ba-label{color:var(--champagne)}
+.ba-col h3{font-size:28px;margin-bottom:32px}
+.ba-col ul{list-style:none;padding:0}
+.ba-col li{padding:14px 0;border-top:1px solid currentColor;border-top-color:rgba(20,20,20,0.1);font-size:15px;line-height:1.5;display:flex;gap:12px}
+.ba-col.after li{border-top-color:rgba(245,241,234,0.1)}
+.ba-col li::before{content:'—';color:var(--champagne);flex-shrink:0}
+.ba-col li:first-child{border-top:none}
+
+/* PROPOSED SECTIONS */
+.sec-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule-strong)}
+.sec-item{display:grid;grid-template-columns:80px 1fr 280px;gap:48px;padding:40px 0;border-bottom:1px solid var(--rule);align-items:center;transition:padding 0.3s ease}
+.sec-item:hover{padding-left:24px}
+@media (max-width:900px){.sec-item{grid-template-columns:60px 1fr;gap:24px}.sec-item .sec-module{grid-column:1/-1;padding-left:84px}}
+.sec-num{font-family:'Fraunces',serif;font-size:52px;font-weight:300;color:var(--champagne);font-style:italic;line-height:1}
+.sec-body h3{font-size:24px;margin-bottom:8px}
+.sec-body p{font-size:15px;line-height:1.55;color:rgba(20,20,20,0.72);max-width:52ch}
+.sec-module{text-align:right;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim)}
+.sec-module .mod{font-family:'Geist',sans-serif;display:block;color:var(--ink);font-weight:500;font-size:13px;margin-top:4px;letter-spacing:0.1em}
+@media (max-width:900px){.sec-module{text-align:left}}
+
+/* VISUAL DIRECTION */
+.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+@media (max-width:900px){.visual-grid{grid-template-columns:1fr;gap:48px}}
+.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:32px;border:1px solid var(--rule)}
+.swatch{aspect-ratio:1;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500}
+.swatch .name{font-family:'Fraunces',serif;font-size:14px;letter-spacing:-0.01em;text-transform:none;font-weight:500;margin-bottom:4px}
+.swatch.ink{background:var(--ink);color:var(--bone)}
+.swatch.bone{background:var(--bone);color:var(--ink);border:1px solid var(--rule)}
+.swatch.champagne{background:var(--champagne);color:var(--ink)}
+.swatch.moss{background:var(--moss);color:var(--bone)}
+.swatch.white{background:var(--white);color:var(--ink);border:1px solid var(--rule)}
+.type-specimen{padding:40px;border:1px solid var(--rule);background:var(--white);border-radius:2px}
+.type-display{font-family:'Fraunces',serif;font-size:72px;line-height:1;font-weight:300;letter-spacing:-0.03em;margin-bottom:16px;font-variation-settings:"opsz" 144}
+.type-display em{color:var(--champagne);font-style:italic}
+.type-sub{font-family:'Fraunces',serif;font-size:22px;font-style:italic;color:var(--dim);margin-bottom:32px;font-weight:300}
+.type-body{font-family:'Geist',sans-serif;font-size:16px;line-height:1.7;color:rgba(20,20,20,0.85);font-weight:400}
+.type-meta{margin-top:32px;padding-top:24px;border-top:1px solid var(--rule);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim)}
+.type-meta strong{color:var(--ink);font-weight:500}
+
+/* HERO CONCEPT */
+.hero-concept{background:var(--ink);color:var(--bone);padding:120px 80px;border-radius:2px;position:relative;overflow:hidden}
+.hero-concept::before{content:'';position:absolute;top:-50%;right:-20%;width:80%;height:200%;background:radial-gradient(ellipse,rgba(181,151,102,0.15),transparent 70%);pointer-events:none}
+.hero-concept h4{color:var(--champagne)}
+.hero-concept h2{color:var(--bone);margin:20px 0 32px;max-width:18ch}
+.hero-concept h2 em{color:var(--champagne)}
+.hero-concept p{color:rgba(245,241,234,0.82);font-size:19px;max-width:62ch;line-height:1.7}
+.hero-concept .caption{font-family:'Fraunces',serif;font-style:italic;color:var(--champagne);font-size:24px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(245,241,234,0.15);max-width:100%}
+@media (max-width:768px){.hero-concept{padding:80px 32px}}
+
+/* VOICE AGENT */
+.voice-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:start}
+@media (max-width:900px){.voice-layout{grid-template-columns:1fr;gap:48px}}
+.voice-capabilities{display:flex;flex-direction:column;gap:0;margin-top:32px}
+.voice-cap{padding:24px 0;border-top:1px solid var(--rule);display:flex;gap:24px;align-items:baseline}
+.voice-cap:last-child{border-bottom:1px solid var(--rule)}
+.voice-cap .num{font-family:'Fraunces',serif;font-size:24px;color:var(--champagne);font-style:italic;font-weight:300;flex-shrink:0;width:40px}
+.voice-cap .txt{font-size:16px;line-height:1.55}
+.voice-cap .txt strong{font-weight:500;color:var(--ink)}
+.voice-card{padding:40px;background:var(--white);border:1px solid var(--rule);border-radius:2px;position:relative}
+.voice-card::before{content:'';position:absolute;top:32px;right:32px;width:12px;height:12px;background:var(--champagne);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.4)}}
+.voice-card h4{margin-bottom:16px}
+.voice-card .name{font-family:'Fraunces',serif;font-size:28px;margin-bottom:8px;font-weight:500}
+.voice-card .role{color:var(--dim);font-size:14px;margin-bottom:24px}
+.voice-dialog{border-top:1px solid var(--rule);padding-top:24px;font-size:14px}
+.voice-dialog .q{color:var(--dim);margin-bottom:8px;font-style:italic}
+.voice-dialog .a{color:var(--ink);margin-bottom:20px;line-height:1.55}
+.voice-dialog .a::before{content:'';display:inline-block;width:3px;height:14px;background:var(--champagne);margin-right:10px;vertical-align:-2px}
+
+/* TECH APPROACH */
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--rule-strong);border:1px solid var(--rule-strong)}
+.tech-card{background:var(--bone);padding:40px}
+.tech-card .lab{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--champagne);margin-bottom:16px;font-weight:600}
+.tech-card h3{font-size:20px;margin-bottom:12px;font-family:'Fraunces',serif}
+.tech-card p{font-size:14px;line-height:1.55;color:rgba(20,20,20,0.7)}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule-strong)}
+.phase{display:grid;grid-template-columns:140px 1fr 180px;gap:40px;padding:32px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+@media (max-width:768px){.phase{grid-template-columns:100px 1fr}.phase .phase-dur{grid-column:1/-1;padding-left:140px;color:var(--champagne)}}
+.phase-label{font-family:'Fraunces',serif;font-size:28px;font-weight:300;color:var(--champagne);font-style:italic}
+.phase-body h4{color:var(--ink);font-family:'Fraunces',serif;font-size:20px;font-weight:500;letter-spacing:-0.01em;text-transform:none;margin-bottom:6px}
+.phase-body p{font-size:14px;line-height:1.5;color:rgba(20,20,20,0.68);max-width:54ch}
+.phase-dur{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);text-align:right}
+
+/* CTA */
+.cta{text-align:center;padding:160px 0 180px;background:var(--ink);color:var(--bone);margin:80px -100vw 0;box-shadow:0 0 0 100vmax var(--ink);clip-path:inset(0 -100vmax)}
+.cta h4{color:var(--champagne);margin-bottom:24px}
+.cta h2{color:var(--bone);margin-bottom:32px}
+.cta h2 em{color:var(--champagne)}
+.cta p{color:rgba(245,241,234,0.78);margin:0 auto 48px;font-size:19px}
+.cta-btn{display:inline-block;padding:20px 48px;border:1px solid var(--champagne);color:var(--champagne);font-family:'Geist',sans-serif;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;transition:all 0.4s ease}
+.cta-btn:hover{background:var(--champagne);color:var(--ink);border-color:var(--champagne)}
+
+/* FOOTER */
+footer{padding:64px 0;text-align:center;border-top:1px solid var(--rule);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim)}
+footer .sig{font-family:'Fraunces',serif;font-size:22px;font-style:italic;color:var(--champagne);margin-top:16px;letter-spacing:0;text-transform:none}
+
+/* ANTI-PATTERNS LIST */
+.avoid-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:40px}
+.avoid-item{padding:20px 24px;border:1px solid rgba(225,82,82,0.15);border-radius:2px;font-size:13px;line-height:1.5;color:rgba(20,20,20,0.75);background:rgba(225,82,82,0.02)}
+.avoid-item::before{content:'✕ ';color:#a84a4a;font-weight:600;margin-right:8px}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <span class="brand">Cinematic Design Studio</span>
+    <span>Proposal · 2026.04.16</span>
+  </div>
+  <div class="hero-center">
+    <div class="eyebrow">Prepared for · Sarah De Jesus</div>
+    <h1>A brand <em>worthy</em> of the clarity you already have.</h1>
+    <p class="hero-lede">Replacing a generic KW subpage with a cinematic, bilingual, Bergen-County-anchored personal-brand site — engineered to compress three years of credibility-building into a single launch.</p>
+  </div>
+  <dl class="hero-meta">
+    <div><dt>Client</dt><dd>The SD Group</dd></div>
+    <div><dt>Vibe Archetype</dt><dd>Editorial Luxury</dd></div>
+    <div><dt>Service Area</dt><dd>Bergen County, NJ</dd></div>
+    <div><dt>Launch Window</dt><dd>~2 weeks</dd></div>
+  </dl>
+</section>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary">
+  <div class="section-head">
+    <h4>01 · Executive Summary</h4>
+    <h2>Why a cinematic site, <em>now</em>.</h2>
+  </div>
+  <div class="exec-grid">
+    <div class="exec-main">
+      <p>Sarah De Jesus sits at a rare intersection for the Bergen County luxury market: NJ-licensed REALTOR® (#2669265), Keller Williams Village Square-supported, and fully bilingual in English and Spanish. The luxury segment in Bergen is dominated by English-only agents serving a demographic that is meaningfully Hispanic and growing — yet <strong>almost none of the high-end agent sites in the region offer a genuine bilingual pathway</strong> or a Latino-buyer-aware process walkthrough.</p>
+      <p>Today her entire online presence is <a href="https://sdejesus.kw.com" target="_blank">sdejesus.kw.com</a> — a generic Keller Williams template, indistinguishable from every other KW agent in the country. She has already done the hardest thing a new agent does: chosen a brand name, a tagline, and a persona (Sarah Dee · The SD Group) that are strategically clear and emotionally warm. <strong>What she lacks is a surface worthy of that clarity.</strong></p>
+      <p>In a SERP where Christina Gibbons Group and The Gubb Team lead with functional-but-conventional sites, a cinematic + bilingual brand site is the single fastest way to leapfrog the "new agent" perception bracket entirely. Every listing, client, and referral she earns from this point forward will be validated against that site first.</p>
+    </div>
+    <aside class="exec-aside">
+      <h4>What gets delivered</h4>
+      <ul>
+        <li>Scroll-driven cinematic hero with Bergen County B-roll</li>
+        <li>Bilingual EN / ES pathway across every section</li>
+        <li>Editorial "About" with Sarah Dee's story + bilingual pathway</li>
+        <li>Featured-listings horizontal showcase (empty-state ready)</li>
+        <li>The "SD Method" — 12-step listing process walkthrough</li>
+        <li>Bergen County neighborhood guides (parallax)</li>
+        <li>Testimonial capture surface (accordion-slider)</li>
+        <li>AI voice concierge — bilingual, 24/7, phone + web</li>
+        <li>Home valuation lead capture + newsletter signup</li>
+        <li>Full SEO (Schema.org RealEstateAgent, OG, Twitter)</li>
+        <li>Custom domain + GitHub auto-deploy</li>
+        <li>Portable design system for Instagram, flyers, email</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after">
+  <div class="section-head">
+    <h4>02 · Positioning Shift</h4>
+    <h2>From KW template to <em>cinematic personal brand</em>.</h2>
+    <p class="lede">The same credentials, same warmth, same brokerage support — surfaced in a register that actually matches the $1.2M+ transaction Sarah is asking clients to trust her with.</p>
+  </div>
+  <div class="ba-grid">
+    <div class="ba-col before">
+      <div class="ba-label">Today · sdejesus.kw.com</div>
+      <h3>Generic KW subpage</h3>
+      <ul>
+        <li>Identical layout to every KW agent nationally</li>
+        <li>No personal story, no origin, no positioning</li>
+        <li>No bilingual pathway — "Spanish" invisible</li>
+        <li>No bilingual signal, no Bergen-specific editorial</li>
+        <li>No cinematic hero, no motion, no brand voice</li>
+        <li>No lead-gen beyond default broker form</li>
+        <li>Zero SEO compounding — not indexed for her name</li>
+        <li>Mobile experience: cramped brokerage template</li>
+      </ul>
+    </div>
+    <div class="ba-col after">
+      <div class="ba-label">Launch · thesdgroup.com</div>
+      <h3>Editorial Luxury brand site</h3>
+      <ul>
+        <li>Curtain-reveal hero — golden-hour Ridgewood Tudor</li>
+        <li>Sarah Dee story module with founder photography</li>
+        <li>EN / ES toggle — bilingual throughout</li>
+        <li>Bilingual process track for Latino households</li>
+        <li>Scroll-driven video, kinetic type, magnetic hover</li>
+        <li>Home valuation + buyer-qualification forms</li>
+        <li>Schema.org RealEstateAgent · Bergen long-tail SEO</li>
+        <li>Mobile: cinematic single-column, thumb-first CTAs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROPOSED SECTIONS -->
+<section id="sections">
+  <div class="section-head">
+    <h4>03 · Site Architecture</h4>
+    <h2>Eight sections, <em>one story</em>.</h2>
+    <p class="lede">Modules drawn from the Cinematic Design Studio module library. Each is responsive, accessibility-compliant, and orchestrated with GSAP ScrollTrigger + spring physics.</p>
+  </div>
+  <div class="sec-list">
+
+    <div class="sec-item">
+      <div class="sec-num">01</div>
+      <div class="sec-body"><h3>Cinematic Hero</h3><p>Slow theater-curtain reveal of a Ridgewood Tudor at golden hour. Name and editorial tagline dissolve in as the viewer scrolls. No search bar. No stock drone. Just presence.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">curtain-reveal</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">02</div>
+      <div class="sec-body"><h3>Text-Mask Mission</h3><p>Scroll-driven clip-path reveal of the brand's editorial statement — "Bergen County, Brought Home." — against a subtle Champagne gradient fill.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">text-mask</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">03</div>
+      <div class="sec-body"><h3>About — Sarah Dee</h3><p>Split-scroll layout. Founder photography parallaxes on one side, the Sarah Dee story (bilingual, KW Village Square, Ridgewood, systems-driven) unfolds on the other. EN / ES toggle surfaces here.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">split-scroll</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">04</div>
+      <div class="sec-body"><h3>Featured Listings</h3><p>Horizontal-scroll showcase of current and recent listings. Empty-state ready: launch-day shows 2–3 signature comp listings with permission, or "Available Soon" placeholders that don't look like placeholders.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">horizontal-scroll</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">05</div>
+      <div class="sec-body"><h3>The SD Method</h3><p>Sticky-stack presentation of the 12-step listing process — visible proof of the "systems-driven" positioning. Available in both English and Spanish. Becomes shareable content on its own.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">sticky-stack</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">06</div>
+      <div class="sec-body"><h3>Bergen County Neighborhoods</h3><p>Zoom-parallax through Ridgewood, Wyckoff, Ho-Ho-Kus, Glen Rock, Midland Park, Franklin Lakes. Each card links to a dedicated neighborhood page that SEO-compounds over time.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">zoom-parallax</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">07</div>
+      <div class="sec-body"><h3>Testimonials</h3><p>Accordion-slider layout ready to absorb closed-deal testimonials as they accumulate. Launch-day seeded with KW mentor endorsements and bilingual peer quotes.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">accordion-slider</span></div>
+    </div>
+
+    <div class="sec-item">
+      <div class="sec-num">08</div>
+      <div class="sec-body"><h3>Contact &amp; Voice Agent</h3><p>Spotlight-border CTA with EN/ES-aware form, direct phone, email, Instagram link, and the embedded bilingual AI concierge. Newsletter signup integrated.</p></div>
+      <div class="sec-module"><span>Module</span><span class="mod">spotlight-border</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VISUAL DIRECTION -->
+<section id="visual">
+  <div class="section-head">
+    <h4>04 · Visual Direction</h4>
+    <h2>Editorial Luxury — the <em>quiet</em> alternative.</h2>
+    <p class="lede">Benchmarked against Aaron Kirman, Josh Flagg, and Sotheby's restraint. Explicitly not Compass (too tech), not Serhant (too loud), not KW (too generic).</p>
+  </div>
+  <div class="visual-grid">
+    <div>
+      <h4>Palette</h4>
+      <h3 style="margin:12px 0 8px;font-size:22px">Ink · Bone · Champagne · Moss</h3>
+      <p style="font-size:15px;color:var(--dim)">A five-token palette. Ink for text and hero overlay, Bone as the editorial canvas, Champagne as the single deliberate accent, Moss as a Bergen-botanical secondary divider. Zero neon. Zero blue. Zero violet.</p>
+      <div class="palette">
+        <div class="swatch ink"><div class="name">Ink</div>#141414</div>
+        <div class="swatch bone"><div class="name">Bone</div>#F5F1EA</div>
+        <div class="swatch champagne"><div class="name">Champagne</div>#B59766</div>
+        <div class="swatch moss"><div class="name">Moss</div>#3A4A3F</div>
+        <div class="swatch white"><div class="name">White</div>#FFFFFF</div>
+      </div>
+    </div>
+    <div>
+      <h4>Typography</h4>
+      <h3 style="margin:12px 0 8px;font-size:22px">Fraunces + Geist</h3>
+      <p style="font-size:15px;color:var(--dim);margin-bottom:24px">Variable serif display + premium neo-grotesque body. Handles listing data, editorial prose, and bilingual copy without breaking register.</p>
+      <div class="type-specimen">
+        <div class="type-display">Bergen<br>brought <em>home.</em></div>
+        <div class="type-sub">Real estate with strategy, service, and results.</div>
+        <div class="type-body">Sarah Dee works out of Keller Williams Village Square in Ridgewood. She is fully bilingual in English and Spanish, and builds The SD Group around a systems-driven approach to every transaction.</div>
+        <div class="type-meta"><strong>Display ·</strong> Fraunces variable · <strong>Body ·</strong> Geist 400/500</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO CONCEPT -->
+<section id="hero-concept">
+  <div class="section-head">
+    <h4>05 · Hero Concept</h4>
+    <h2>Not a property shot. <em>A presence</em>.</h2>
+  </div>
+  <div class="hero-concept">
+    <h4>Concept — Curtain Reveal · Golden Hour</h4>
+    <h2>A Ridgewood Tudor at 5:47pm. The camera doesn't move. <em>The light does</em>.</h2>
+    <p>A slow, cinematic 4K curtain-reveal of a Ridgewood Tudor or Colonial at golden hour. The frame holds — stone steps, leaded glass, a hedge just turning in late afternoon light. As the viewer scrolls, theater-curtain panels part and Sarah's name dissolves in alongside a single editorial tagline. No search bar. No stock drone. No swelling music. No "Search Now" button competing for attention. Just the house, the light, and the quiet assertion that this is where the brand lives.</p>
+    <p style="margin-top:24px">Generated with Kling 3.0 4K + Seedance 2.0 in parallel — user picks the winner. Frames extracted at 24fps, scroll-scrubbed via GSAP ScrollTrigger. First frame preloaded separately for instant display on load; remaining frames stream in.</p>
+    <div class="caption">"Bergen County, brought home."</div>
+  </div>
+</section>
+
+<!-- VOICE AGENT -->
+<section id="voice">
+  <div class="section-head">
+    <h4>06 · AI Voice Concierge</h4>
+    <h2>A <em>bilingual</em> agent that answers the phone at 11:47pm.</h2>
+    <p class="lede">Built on ElevenLabs ConvAI with a Twilio phone line and full bilingual knowledge base. Handles qualification, neighborhood Q&amp;A, scheduling, and after-hours overflow — in English or Spanish, automatic language detection.</p>
+  </div>
+  <div class="voice-layout">
+    <div>
+      <div class="voice-capabilities">
+        <div class="voice-cap"><div class="num">i</div><div class="txt"><strong>Language detection + switching</strong> — caller's first language wins. Mid-call code-switching supported.</div></div>
+        <div class="voice-cap"><div class="num">ii</div><div class="txt"><strong>Bergen neighborhood depth</strong> — school districts, median prices, commute data, current inventory counts for every town in the service area.</div></div>
+        <div class="voice-cap"><div class="num">iii</div><div class="txt"><strong>The SD Method walkthrough</strong> — can narrate all 12 steps of the listing process on demand, in either language.</div></div>
+        <div class="voice-cap"><div class="num">iv</div><div class="txt"><strong>Qualification + handoff</strong> — captures budget, timeline, property type, then books a call on Sarah's calendar or emails a warm intro.</div></div>
+        <div class="voice-cap"><div class="num">v</div><div class="txt"><strong>Guardrails</strong> — prompt-injection defense, profanity filter, graceful boundary on topics outside real estate.</div></div>
+      </div>
+    </div>
+    <div class="voice-card">
+      <h4>Live sample</h4>
+      <div class="name">Sarah Dee — Studio Concierge</div>
+      <div class="role">Bilingual · 24/7 · via phone &amp; web widget</div>
+      <div class="voice-dialog">
+        <div class="q">"Hola, quería saber cuánto valen las casas en Ridgewood ahora."</div>
+        <div class="a">Claro, con gusto. El precio mediano en Ridgewood ahora mismo está alrededor de $1.2M, aunque varía mucho por zona y tipo de casa. ¿Está buscando comprar o quiere saber el valor de una propiedad que ya tiene?</div>
+        <div class="q">"Is Sarah available to show a home in Wyckoff this Saturday?"</div>
+        <div class="a">She has openings Saturday morning and late afternoon. Can I grab your name, the address you'd like to see, and a good callback number to confirm?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH APPROACH -->
+<section id="tech">
+  <div class="section-head">
+    <h4>07 · Technical Approach</h4>
+    <h2>Built to be <em>owned</em>, not rented.</h2>
+    <p class="lede">No templates. No WordPress bloat. No brokerage-subdomain lock-in. A single deployable HTML artifact with a complete design system exported for client handoff.</p>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-card"><div class="lab">Stack</div><h3>Vanilla + GSAP</h3><p>Single index.html, inline CSS + JS. GSAP 3.12.5 + ScrollTrigger from CDN. Zero build step. Zero framework dependency. Loads in under 1.5s.</p></div>
+    <div class="tech-card"><div class="lab">Hosting</div><h3>Vercel + GitHub</h3><p>Push to main → auto-deploy. Custom domain at thesdgroup.com (pending availability check). Edge caching, free SSL, 100 Lighthouse.</p></div>
+    <div class="tech-card"><div class="lab">Media</div><h3>Kling 3.0 + Seedance 2.0</h3><p>Native 4K video via Kling, Apple-keynote motion via Seedance. Run in parallel — the user picks the winner frame-for-frame.</p></div>
+    <div class="tech-card"><div class="lab">Voice</div><h3>ElevenLabs + Twilio</h3><p>Bilingual ConvAI agent with a dedicated North NJ phone number. RAG over the full brand knowledge base. 15-minute max call duration.</p></div>
+    <div class="tech-card"><div class="lab">SEO</div><h3>Schema.org + OG + Sitemap</h3><p>RealEstateAgent markup, Open Graph cards, Twitter summary cards, XML sitemap, neighborhood long-tail pages, full mobile-first indexing.</p></div>
+    <div class="tech-card"><div class="lab">Design System</div><h3>Portable DESIGN.md</h3><p>Full token export — colors, type scale, spacing, motion — in Stitch-compatible format. Ready for flyers, Instagram templates, email signature.</p></div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="section-head">
+    <h4>08 · Build Sequence</h4>
+    <h2>Thirteen phases, <em>one site</em>.</h2>
+    <p class="lede">This proposal represents the first deliverable — Phase 0, Competitive Analysis. What follows is a guided walk through the remaining twelve, with approval checkpoints at every meaningful decision.</p>
+  </div>
+  <div class="timeline">
+    <div class="phase"><div class="phase-label">00</div><div class="phase-body"><h4>Competitive Analysis</h4><p>20-competitor scan · design pattern deconstruction · niche opportunity map. <strong style="color:var(--champagne)">Delivered.</strong></p></div><div class="phase-dur">Complete</div></div>
+    <div class="phase"><div class="phase-label">01</div><div class="phase-body"><h4>Stitch 2.0 Design Direction</h4><p>AI design canvas generates the master DESIGN.md that governs the rest of the build.</p></div><div class="phase-dur">Day 1</div></div>
+    <div class="phase"><div class="phase-label">02</div><div class="phase-body"><h4>Brand Analysis + Logo</h4><p>Finalize palette, typography, founder photography plan. Recreate or design the SD monogram as inline SVG.</p></div><div class="phase-dur">Day 1–2</div></div>
+    <div class="phase"><div class="phase-label">03</div><div class="phase-body"><h4>Hero Concepts</h4><p>Three cinematic hero storyboards with Kling 3.0 multi-shot prompts + Seedance 2.0 alternatives.</p></div><div class="phase-dur">Day 2</div></div>
+    <div class="phase"><div class="phase-label">04</div><div class="phase-body"><h4>Scene Generation</h4><p>Parallel Kling 4K + Seedance 2.0 renders of the approved concept. 121 frames extracted for scroll-scrub.</p></div><div class="phase-dur">Day 3</div></div>
+    <div class="phase"><div class="phase-label">05</div><div class="phase-body"><h4>Site Build</h4><p>Full index.html with all eight sections, responsive breakpoints, GSAP motion, ARIA, bilingual toggle.</p></div><div class="phase-dur">Day 4–7</div></div>
+    <div class="phase"><div class="phase-label">06</div><div class="phase-body"><h4>Image Generation</h4><p>10–15 AI-generated editorial images — founder portraits (if needed), neighborhood stills, section backgrounds.</p></div><div class="phase-dur">Day 7–8</div></div>
+    <div class="phase"><div class="phase-label">07</div><div class="phase-body"><h4>SEO &amp; Meta</h4><p>Schema.org RealEstateAgent, Open Graph, Twitter cards, favicon, sitemap.xml, robots.txt.</p></div><div class="phase-dur">Day 8</div></div>
+    <div class="phase"><div class="phase-label">08</div><div class="phase-body"><h4>Deploy + GitHub</h4><p>Repo creation, Vercel deploy, custom-domain DNS setup, GitHub auto-deploy wiring.</p></div><div class="phase-dur">Day 9</div></div>
+    <div class="phase"><div class="phase-label">09</div><div class="phase-body"><h4>Voice Agent</h4><p>ElevenLabs bilingual agent, full knowledge base, Twilio phone line provision + number publication.</p></div><div class="phase-dur">Day 9–10</div></div>
+    <div class="phase"><div class="phase-label">10</div><div class="phase-body"><h4>Newsletter Signup</h4><p>Email capture form with Mailchimp/ConvertKit hookup path documented for client.</p></div><div class="phase-dur">Day 10</div></div>
+    <div class="phase"><div class="phase-label">11</div><div class="phase-body"><h4>Design System Export</h4><p>Portable DESIGN.md + token JSON for Instagram templates, flyers, email signature, future subpages.</p></div><div class="phase-dur">Day 10</div></div>
+    <div class="phase"><div class="phase-label">12</div><div class="phase-body"><h4>Final QA</h4><p>UI/UX Pro Max 79-rule audit, Lighthouse, accessibility scan, mobile validation, cross-browser test, phone-line verification.</p></div><div class="phase-dur">Day 10–11</div></div>
+  </div>
+</section>
+
+<!-- ANTI-PATTERNS -->
+<section id="avoid">
+  <div class="section-head">
+    <h4>09 · What We Won't Do</h4>
+    <h2>Twelve patterns we <em>will not</em> ship.</h2>
+    <p class="lede">The design rules that keep the site out of generic-realtor territory. These are enforced across every phase.</p>
+  </div>
+  <div class="avoid-grid">
+    <div class="avoid-item">Stock drone shots of suburban cul-de-sacs</div>
+    <div class="avoid-item">Corporate blue + white KW-default palette</div>
+    <div class="avoid-item">Lorem Ipsum or AI-generated testimonials</div>
+    <div class="avoid-item">Auto-playing music or voice on page load</div>
+    <div class="avoid-item">Search bar as primary hero element</div>
+    <div class="avoid-item">Inter or generic Google sans for display</div>
+    <div class="avoid-item">Purple / violet gradients + neon accents</div>
+    <div class="avoid-item">Carousel-of-everything homepage</div>
+    <div class="avoid-item">MLS-iframe grids with inconsistent photo quality</div>
+    <div class="avoid-item">Red CTA buttons (KW parent-brand collision)</div>
+    <div class="avoid-item">Script fonts signaling "feminine luxury"</div>
+    <div class="avoid-item">Animated stat counters with no context</div>
+  </div>
+</section>
+
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h4>Ready to move</h4>
+    <h2>Approve Phase 0. <em>Unlock the build</em>.</h2>
+    <p>This proposal closes the competitive-analysis phase. Approving moves us to Phase 1 — Stitch 2.0 design direction — and begins the eleven-day path to thesdgroup.com going live.</p>
+    <a href="#" class="cta-btn">Approve &amp; Begin Build</a>
+  </div>
+</section>
+
+<div class="container">
+  <footer>
+    <p>Prepared by VioX AI · Cinematic Design Studio</p>
+    <p style="margin-top:4px">Sarah De Jesus · The SD Group · NJ #2669265 · sdejesus@kw.com · (201) 314-5696</p>
+    <div class="sig">— Bergen County, Brought Home.</div>
+  </footer>
+</div>
+
+</body>
+</html>

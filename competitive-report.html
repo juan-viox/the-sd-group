@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SD Group — Competitive Landscape Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414; --bone:#F5F1EA; --champagne:#B59766; --moss:#3A4A3F;
+  --soft-white:#FFFFFF; --dim:#6b6b6b; --rule:rgba(245,241,234,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Geist',system-ui,sans-serif;
+  background:var(--ink); color:var(--bone);
+  line-height:1.6; font-weight:400; letter-spacing:0;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-0.02em;line-height:1.1}
+h1{font-size:clamp(48px,7vw,96px);font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 50}
+h2{font-size:clamp(32px,4vw,56px);font-weight:400;font-variation-settings:"opsz" 96}
+h3{font-size:clamp(22px,2vw,28px);font-weight:500}
+h4{font-size:18px;font-weight:500;font-family:'Geist',sans-serif;letter-spacing:0.04em;text-transform:uppercase;color:var(--champagne)}
+p{font-size:17px;line-height:1.75;color:rgba(245,241,234,0.85);max-width:68ch}
+.container{max-width:1320px;margin:0 auto;padding:0 48px}
+@media (max-width:768px){.container{padding:0 24px}}
+
+/* HERO */
+.hero{min-height:100dvh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(181,151,102,0.08),transparent 60%);pointer-events:none}
+.eyebrow{font-family:'Geist',sans-serif;font-size:13px;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);margin-bottom:40px;font-weight:500}
+.hero h1{max-width:16ch;margin-bottom:32px}
+.hero h1 em{font-style:italic;color:var(--champagne);font-weight:300}
+.hero-lede{font-size:21px;line-height:1.55;max-width:60ch;color:rgba(245,241,234,0.75);font-weight:300}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;margin-top:80px;padding-top:40px;border-top:1px solid var(--rule)}
+.meta-grid dt{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.meta-grid dd{font-family:'Fraunces',serif;font-size:22px;font-weight:400;color:var(--bone)}
+
+/* SECTIONS */
+section{padding:120px 0;border-top:1px solid var(--rule)}
+section.flush{padding:60px 0}
+.section-head{max-width:80ch;margin-bottom:80px}
+.section-head h2{margin-bottom:24px}
+.section-head h2 em{font-style:italic;color:var(--champagne)}
+.section-head p{font-size:19px}
+
+/* MARKET GAPS */
+.gaps-card{background:linear-gradient(145deg,rgba(181,151,102,0.07),rgba(245,241,234,0.02));border:1px solid var(--rule);border-radius:2px;padding:64px;position:relative}
+.gaps-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:80px;background:var(--champagne)}
+.gaps-card p{font-size:19px;line-height:1.8;max-width:80ch}
+
+/* NICHE OPPORTUNITIES */
+.niche-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:0;margin-top:40px;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.niche-card{padding:48px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);position:relative;transition:background 0.4s ease}
+.niche-card:hover{background:rgba(181,151,102,0.04)}
+.niche-card.flagship{background:linear-gradient(135deg,rgba(181,151,102,0.10),rgba(58,74,63,0.06))}
+.niche-card.flagship::after{content:'FLAGSHIP OPPORTUNITY';position:absolute;top:20px;right:20px;font-size:9px;letter-spacing:0.3em;color:var(--champagne);font-weight:600}
+.niche-num{font-family:'Fraunces',serif;font-size:72px;font-weight:300;color:var(--champagne);opacity:0.4;line-height:1;margin-bottom:24px;font-style:italic}
+.niche-card p{font-size:15px;line-height:1.65;color:rgba(245,241,234,0.82)}
+
+/* COMPETITORS */
+.cat-block{margin-bottom:100px}
+.cat-label{display:flex;align-items:baseline;gap:24px;margin-bottom:40px;padding-bottom:16px;border-bottom:1px solid var(--rule)}
+.cat-label h3{font-family:'Fraunces',serif;font-size:32px;font-weight:400}
+.cat-label .cat-note{font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim)}
+.comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1px;background:var(--rule)}
+.comp-card{background:var(--ink);padding:32px;position:relative;transition:background 0.3s ease;display:flex;flex-direction:column;gap:16px}
+.comp-card:hover{background:rgba(245,241,234,0.02)}
+.comp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+.comp-name{font-family:'Fraunces',serif;font-size:22px;font-weight:500;line-height:1.2}
+.comp-name a{color:var(--bone);text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.3s}
+.comp-name a:hover{border-bottom-color:var(--champagne)}
+.score{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid var(--champagne);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:18px;font-weight:500;color:var(--champagne)}
+.score.high{background:var(--champagne);color:var(--ink)}
+.comp-loc{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim)}
+.comp-desc{font-size:14px;line-height:1.6;color:rgba(245,241,234,0.78)}
+.comp-stand{font-size:13px;font-style:italic;color:var(--champagne);padding:12px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:4px 0}
+.comp-meta{display:flex;justify-content:space-between;gap:16px;font-size:11px;letter-spacing:0.05em;color:var(--dim);margin-top:auto;padding-top:12px}
+
+/* DESIGN TRENDS */
+.trend-list{display:flex;flex-direction:column;gap:0}
+.trend-item{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--rule);align-items:baseline}
+.trend-item:last-child{border-bottom:1px solid var(--rule)}
+.trend-num{font-family:'Fraunces',serif;font-size:44px;font-weight:300;color:var(--champagne);font-style:italic;line-height:1}
+.trend-text{font-size:18px;line-height:1.55;color:rgba(245,241,234,0.88);max-width:68ch}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.pricing-card{padding:32px;border:1px solid var(--rule);border-radius:2px}
+.pricing-card h4{margin-bottom:16px}
+.pricing-card .num{font-family:'Fraunces',serif;font-size:42px;font-weight:300;color:var(--bone);margin-bottom:8px;letter-spacing:-0.02em}
+.pricing-card .label{font-size:13px;color:var(--dim)}
+
+/* FOOTER */
+footer{padding:80px 0;border-top:1px solid var(--rule);text-align:center}
+footer p{margin:0 auto 8px;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--dim)}
+footer .sig{font-family:'Fraunces',serif;font-size:20px;font-style:italic;color:var(--champagne);margin-top:24px}
+
+/* PRINT */
+@media print{body{background:white;color:black}}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">Competitive Landscape · April 2026</div>
+  <h1>Bergen County real estate has a <em>wide-open lane</em>. The SD Group is built to take it.</h1>
+  <p class="hero-lede">A 20-competitor analysis of the Ridgewood, Wyckoff, Franklin Lakes, and Saddle River luxury corridor — plus aspirational national benchmarks, adjacent lifestyle brands, and the five niche angles no local agent is claiming.</p>
+  <dl class="meta-grid">
+    <div><dt>Prepared for</dt><dd>Sarah De Jesus</dd></div>
+    <div><dt>Brand</dt><dd>The SD Group</dd></div>
+    <div><dt>Brokerage</dt><dd>KW Village Square</dd></div>
+    <div><dt>Market</dt><dd>Bergen County, NJ</dd></div>
+    <div><dt>License</dt><dd>NJ #2669265</dd></div>
+  </dl>
+</section>
+
+<!-- MARKET GAPS -->
+<section id="gaps">
+  <div class="section-head">
+    <h4>01 · Market Diagnosis</h4>
+    <h2>What the Bergen County luxury web <em>is not</em> doing.</h2>
+  </div>
+  <div class="gaps-card">
+    <p>The Bergen County real estate web presence is dominated by template IDX sites, brokerage-subdomain agent pages, and stock Zillow-style listing grids. Even top producers like Phyllis Calianese and boutique teams at Christie's rely on dated layouts, generic stock imagery, and copy-heavy bios — there is almost no cinematic video, no editorial property storytelling, and no AI-driven concierge experience in the entire Ridgewood / Wyckoff / Franklin Lakes corridor.</p>
+    <p style="margin-top:24px"><strong style="color:var(--champagne);font-weight:500">Critically:</strong> no Bergen County agent is positioned as luxury <em>and</em> genuinely bilingual English + Spanish. Bilingual agents cluster in mid-market eastern Bergen (Lyndhurst, Rutherford, Hackensack); luxury agents in Ridgewood, Saddle River, and Wyckoff operate English-only. This bilingual-luxury intersection is The SD Group's clearest unclaimed wedge — and the Latino professional and international-buyer segment at $1.2M+ is currently un-served.</p>
+    <p style="margin-top:24px">National aspirational brands (Serhant, The Agency, Alexander Team, Aaron Kirman) have set a visual bar no Bergen competitor is meeting. Mobile experiences are especially weak: slow loads, cramped galleries, and no scroll-driven narrative. Niche segments — first-time buyers, NYC relocators, multi-gen households, LatAm executive relocators — are entirely unserved with dedicated content hubs.</p>
+  </div>
+</section>
+
+<!-- NICHE OPPORTUNITIES -->
+<section id="niche">
+  <div class="section-head">
+    <h4>02 · The Unclaimed Wedges</h4>
+    <h2>Seven positioning lanes <em>no one owns</em> in Bergen County.</h2>
+    <p>Ranked by defensibility. The first two are flagship — they combine Sarah's credentials with a market gap that cannot be copied overnight.</p>
+  </div>
+  <div class="niche-grid">
+    <div class="niche-card flagship">
+      <div class="niche-num">01</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">Bergen's only bilingual luxury concierge</h3>
+      <p>Combining luxury positioning, English + Spanish native service, and a cinematic editorial site to own a lane no Ridgewood / Wyckoff / Saddle River competitor occupies. Assets: EN/ES site toggle, Spanish listing flyers, bilingual video tours, /es landing page.</p>
+    </div>
+    <div class="niche-card flagship">
+      <div class="niche-num">02</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">Bilingual buyer onboarding for Latino professional households</h3>
+      <p>Own the category position of "the agent who answers the phone, shows the home, and explains the closing — in Spanish or English, same standard of care." Every touchpoint bilingual: site, listing flyers, video tours, voice agent, contracts walkthrough. No Bergen County luxury comp is doing this today.</p>
+    </div>
+    <div class="niche-card">
+      <div class="niche-num">03</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">First-time Bergen County buyer onboarding</h3>
+      <p>A cinematic video-driven series that walks Millennials and young families through buying their first $900K+ home in Ridgewood / Wyckoff — owning the "teacher" positioning no local competitor holds.</p>
+    </div>
+    <div class="niche-card">
+      <div class="niche-num">04</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">NYC-to-Bergen + LatAm-to-Bergen relocation concierge</h3>
+      <p>A dedicated landing experience for Manhattan/Brooklyn families trading up for space, plus a bilingual track for Latin American executives on corporate transfer — a segment only Sarah can credibly serve.</p>
+    </div>
+    <div class="niche-card">
+      <div class="niche-num">05</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">Off-market private seller network</h3>
+      <p>An invitation-only pocket-listing network for Ridgewood / Wyckoff sellers who want discretion. Most local agents rely only on MLS. Positions The SD Group as the discreet alternative to broadcast-MLS marketing.</p>
+    </div>
+    <div class="niche-card">
+      <div class="niche-num">06</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">Multi-generational & downsizer strategy</h3>
+      <p>A vertical for Bergen empty-nesters coordinating estate sale, downsize, and adult-child upsize in one integrated package — a need no local agent is packaging.</p>
+    </div>
+    <div class="niche-card">
+      <div class="niche-num">07</div>
+      <h3 style="margin-bottom:16px;font-family:'Fraunces',serif;font-size:20px">The SD Method — systems-driven listing playbook</h3>
+      <p>A publicly published 12-step listing methodology, turning the brand's "systems-driven" DNA into a visible, tangible differentiator no local agent is marketing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECT LOCAL COMPETITORS -->
+<section id="direct-local">
+  <div class="section-head">
+    <h4>03 · The Competition</h4>
+    <h2>20 competitors, <em>four tiers</em>, one benchmark.</h2>
+    <p>Design scores reflect web quality, editorial craft, and mobile experience on a 1–10 scale.</p>
+  </div>
+
+  <div class="cat-block">
+    <div class="cat-label">
+      <h3>Direct Local — Ridgewood, Wyckoff, Franklin Lakes</h3>
+      <span class="cat-note">Design ceiling: 7 / 10</span>
+    </div>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.phylliscalianese.com/" target="_blank">Phyllis Calianese</a></div><div class="comp-loc">Ridgewood · KW Village Square</div></div><div class="score">5</div></div>
+        <p class="comp-desc">Ranked #1 individual agent at KW Village Square 2019, 2021, 2022, 2023. Top 1% Bergen County realtor with deep Ridgewood roots.</p>
+        <div class="comp-stand">Longstanding #1 individual producer; neighborhood-by-neighborhood Ridgewood expertise</div>
+        <div class="comp-meta"><span>$800K – $2.5M</span><span>@phylliscalianese · 1.5k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://nenacolligan.com/" target="_blank">The Colligan Group</a></div><div class="comp-loc">Ridgewood · KW Village Square</div></div><div class="score high">7</div></div>
+        <p class="comp-desc">Boutique team with polished, modern branded site and consistent local marketing presence.</p>
+        <div class="comp-stand">Team brand (not solo) with refined editorial feel</div>
+        <div class="comp-meta"><span>$900K – $2.2M</span><span>@thecolligangroup · 3k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.gowithgill.com/" target="_blank">The Gill Group</a></div><div class="comp-loc">Ridgewood · KW Village Square</div></div><div class="score">6</div></div>
+        <p class="comp-desc">Top-producing team at KW Village Square for 8+ years running. High-volume Bergen County operators.</p>
+        <div class="comp-stand">Volume leader with strong referral engine</div>
+        <div class="comp-meta"><span>$700K – $2M</span><span>@thegillgroupnj · 2.5k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.christiesrealestate.com/" target="_blank">Grazyna "Grace" Ziarko</a></div><div class="comp-loc">Franklin Lakes · Christie's International</div></div><div class="score high">7</div></div>
+        <p class="comp-desc">Christie's top producer with $42M+ in 2024 volume across 21 transactions; closed 322 Crescent Drive at $3.5M.</p>
+        <div class="comp-stand">Highest price-point wins; Christie's luxury branding</div>
+        <div class="comp-meta"><span>$1.5M – $5M+</span><span>@graceziarko · 2k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://madisongroupproperties.com/" target="_blank">Madison Group</a></div><div class="comp-loc">Wyckoff · eXp Realty</div></div><div class="score high">7</div></div>
+        <p class="comp-desc">Wyckoff-based team, first eXp Branch office in Bergen County. Polished team site with strong buyer/seller guides.</p>
+        <div class="comp-stand">Tech-forward eXp model + locally branded experience</div>
+        <div class="comp-meta"><span>$750K – $2M</span><span>@madisongroupproperties · 4k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.tocr.com/" target="_blank">Terrie O'Connor Realtors</a></div><div class="comp-loc">Wyckoff · Independent boutique</div></div><div class="score">6</div></div>
+        <p class="comp-desc">Dominant boutique accounting for 6% of Bergen County property sales in 2024. Multi-office institution.</p>
+        <div class="comp-stand">Hometown boutique authority; multi-generational book</div>
+        <div class="comp-meta"><span>$600K – $2.5M</span><span>@terrieoconnorrealtors · 3.5k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name">Kelly O'Brien &amp; Till Horkenbach</div><div class="comp-loc">Ridgewood · KW Village Square</div></div><div class="score">5</div></div>
+        <p class="comp-desc">Combined 40+ years real estate and 65+ years luxury hospitality. Luxury-positioned KW duo targeting discerning clients.</p>
+        <div class="comp-stand">Luxury hospitality DNA — white-glove positioning</div>
+        <div class="comp-meta"><span>$1M – $3M</span><span>@kellyandtill · 1k</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ASPIRATIONAL -->
+  <div class="cat-block">
+    <div class="cat-label">
+      <h3>Aspirational National — The visual benchmark</h3>
+      <span class="cat-note">Design floor: 9 / 10</span>
+    </div>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://serhant.com/" target="_blank">SERHANT.</a></div><div class="comp-loc">New York · 14 states + DC</div></div><div class="score high">10</div></div>
+        <p class="comp-desc">Ryan Serhant's media-first brokerage — the most-followed real estate brand in the world with 9.5M+ social followers. Sets the bar for cinematic agent-brand sites.</p>
+        <div class="comp-stand">Scroll-driven video hero · editorial property storytelling · in-house media studio</div>
+        <div class="comp-meta"><span>$2M – $50M+</span><span>@serhant · 2M+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.theagencyre.com/" target="_blank">The Agency</a></div><div class="comp-loc">Beverly Hills · Global</div></div><div class="score high">10</div></div>
+        <p class="comp-desc">Mauricio Umansky's global luxury boutique. Moody editorial photography, immersive listing pages, cohesive monochrome-luxe brand system.</p>
+        <div class="comp-stand">Best-in-class listing pages; black-and-red editorial brand</div>
+        <div class="comp-meta"><span>$3M – $100M+</span><span>@theagencyre · 900k+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.joshflagg.com/" target="_blank">Josh Flagg</a></div><div class="comp-loc">Los Angeles · Douglas Elliman</div></div><div class="score high">9</div></div>
+        <p class="comp-desc">Million Dollar Listing LA agent. Personal brand site layered with press, book, and portfolio. Classic-luxury aesthetic with strong photography.</p>
+        <div class="comp-stand">Press-first storytelling; celebrity-agent brand model</div>
+        <div class="comp-meta"><span>$3M – $80M+</span><span>@joshflagg1 · 650k+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://alexanderteam.com/" target="_blank">The Alexander Team</a></div><div class="comp-loc">New York / Miami</div></div><div class="score high">10</div></div>
+        <p class="comp-desc">Ultra-luxury team with cinematic hero videos, full-bleed imagery, and ultra-high-price-point portfolio. Monochrome, refined aesthetic.</p>
+        <div class="comp-stand">Cinematic full-screen video; minimalist typography</div>
+        <div class="comp-meta"><span>$10M – $250M+</span><span>@alexanderteam · 200k+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://aaronkirman.com/" target="_blank">Aaron Kirman Group</a></div><div class="comp-loc">Los Angeles · Christie's</div></div><div class="score high">10</div></div>
+        <p class="comp-desc">$12B+ career sales. Award-winning editorial site with architectural storytelling, interactive maps, beautifully sparse design system.</p>
+        <div class="comp-stand">Architecture-as-hero editorial layouts — <em>primary design reference for SD Group</em></div>
+        <div class="comp-meta"><span>$5M – $150M+</span><span>@aaronkirman · 170k+</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="cat-block">
+    <div class="cat-label">
+      <h3>Experience — Adjacent tastemakers</h3>
+      <span class="cat-note">Shapes buyer expectation</span>
+    </div>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://eye-swoon.com/" target="_blank">EyeSwoon · Athena Calderone</a></div><div class="comp-loc">Brooklyn · Editorial design</div></div><div class="score high">9</div></div>
+        <p class="comp-desc">Interior designer with globally admired editorial site. Tastemaker brand Bergen buyers reference when imagining their own home.</p>
+        <div class="comp-stand">Editorial photography + tasteful typography as template</div>
+        <div class="comp-meta"><span>$250K+ projects</span><span>@eyeswoon · 890k+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://ldarchitecture.com/" target="_blank">LDa Architecture</a></div><div class="comp-loc">Cambridge · Northeast luxury</div></div><div class="score high">9</div></div>
+        <p class="comp-desc">Editorial architecture studio whose residential portfolio visually defines high-end Northeast homes.</p>
+        <div class="comp-stand">Projects grid with immersive full-screen detail pages</div>
+        <div class="comp-meta"><span>$500K+ projects</span><span>@ldarchitecture · 40k+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://greenbauminteriors.com/" target="_blank">Greenbaum Interiors</a></div><div class="comp-loc">Paterson · Bergen-adjacent</div></div><div class="score">6</div></div>
+        <p class="comp-desc">Long-established NJ luxury interior design firm with showroom. Local Bergen-adjacent tastemaker competing for the same discretionary dollar.</p>
+        <div class="comp-stand">Brick-and-mortar showroom + online presence</div>
+        <div class="comp-meta"><span>$75K – $1M+</span><span>@greenbauminteriors · 6k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://creativedesignnj.com/" target="_blank">Creative Design Construction</a></div><div class="comp-loc">Franklin Lakes · Luxury builder</div></div><div class="score">6</div></div>
+        <p class="comp-desc">North NJ luxury custom builder serving Bergen County estate buyers. Buyers engage during and after transactions.</p>
+        <div class="comp-stand">Local custom-build authority with project galleries</div>
+        <div class="comp-meta"><span>$1.5M – $6M+</span><span>@creativedesign_nj · 3k</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LIFESTYLE -->
+  <div class="cat-block">
+    <div class="cat-label">
+      <h3>Luxury Lifestyle — The wallet competition</h3>
+      <span class="cat-note">Where the buyer's dollar flows post-closing</span>
+    </div>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.201magazine.com/" target="_blank">(201) Magazine</a></div><div class="comp-loc">Bergen County</div></div><div class="score">6</div></div>
+        <p class="comp-desc">Premier Bergen County lifestyle publication covering food, homes, fashion. Sets visual and editorial tone for affluent Bergen households.</p>
+        <div class="comp-stand">Hyper-local editorial authority; home-of-the-year features</div>
+        <div class="comp-meta"><span>Editorial / ad-supported</span><span>@201mag · 30k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://dujour.com/" target="_blank">DuJour Magazine</a></div><div class="comp-loc">New York / National</div></div><div class="score high">8</div></div>
+        <p class="comp-desc">National luxury lifestyle magazine read by the North Jersey / NYC affluent set. Tier-1 taste bar for luxury content.</p>
+        <div class="comp-stand">Editorial polish; celebrity and real estate crossover features</div>
+        <div class="comp-meta"><span>Luxury editorial</span><span>@dujourmedia · 130k+</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://www.ridgewoodcc.org/" target="_blank">Ridgewood Country Club</a></div><div class="comp-loc">Paramus</div></div><div class="score">6</div></div>
+        <p class="comp-desc">Historic private club adjacent to the Ridgewood/Paramus market. Primary social hub for Bergen's affluent homeowners.</p>
+        <div class="comp-stand">Access-defining membership; affluent network anchor</div>
+        <div class="comp-meta"><span>$150K+ initiation</span><span>@ridgewoodcc · 2k</span></div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-head"><div><div class="comp-name"><a href="https://rh.com/" target="_blank">RH / Arhaus Paramus</a></div><div class="comp-loc">Paramus · Showrooms</div></div><div class="score high">10</div></div>
+        <p class="comp-desc">Premium home furnishings showrooms functioning as lifestyle destinations. New Bergen homeowners engage within 90 days of closing.</p>
+        <div class="comp-stand">Gallery-as-retail model; cinematic online catalog</div>
+        <div class="comp-meta"><span>$5K – $250K+</span><span>@restorationhardware · 2M+</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- DESIGN TRENDS MISSING -->
+<section id="trends">
+  <div class="section-head">
+    <h4>04 · Design Capital Unclaimed</h4>
+    <h2>Five trends <em>no local agent</em> is executing.</h2>
+    <p>Each represents table-stakes for aspirational national brands — and category-defining for Bergen County.</p>
+  </div>
+  <div class="trend-list">
+    <div class="trend-item"><div class="trend-num">i</div><div class="trend-text">Scroll-driven cinematic video hero with muted B-roll of Ridgewood / Wyckoff streets, homes, and lifestyle. No local agent uses video as the primary hero.</div></div>
+    <div class="trend-item"><div class="trend-num">ii</div><div class="trend-text">Editorial property storytelling — long-form listing pages with photography, architect notes, and neighborhood context rather than MLS-style data tables.</div></div>
+    <div class="trend-item"><div class="trend-num">iii</div><div class="trend-text">AI voice concierge / chat agent for instant buyer qualification and neighborhood Q&amp;A. Zero local adoption. Bilingual EN/ES would be unprecedented.</div></div>
+    <div class="trend-item"><div class="trend-num">iv</div><div class="trend-text">Interactive neighborhood maps with hover-reveal micro-data — schools, commute, median price, recent sales — instead of static Google embeds.</div></div>
+    <div class="trend-item"><div class="trend-num">v</div><div class="trend-text">Kinetic serif typography and a monochrome color system signaling editorial restraint. Local competitors default to blue-accent corporate palettes and sans-serif body copy.</div></div>
+  </div>
+</section>
+
+<!-- PRICING LANDSCAPE -->
+<section id="pricing">
+  <div class="section-head">
+    <h4>05 · Pricing Landscape</h4>
+    <h2>Where Bergen County <em>transacts</em>.</h2>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card"><h4>Entry</h4><div class="num">$700K – $900K</div><div class="label">First-time buyer band in Glen Rock, Midland Park, Ho-Ho-Kus</div></div>
+    <div class="pricing-card"><h4>Core Median</h4><div class="num">$1.1M – $1.3M</div><div class="label">Typical Ridgewood / Wyckoff family home</div></div>
+    <div class="pricing-card"><h4>Upper</h4><div class="num">$1.8M – $2.5M</div><div class="label">Luxury family market — most competitor top-end</div></div>
+    <div class="pricing-card"><h4>Trophy</h4><div class="num">$3M – $5M+</div><div class="label">Saddle River / Franklin Lakes estate tier — Christie's territory</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>Compiled for Sarah De Jesus · The SD Group · NJ #2669265</p>
+  <p>Prepared by VioX AI · Cinematic Design Studio</p>
+  <div class="sig">— Bergen County, Brought Home.</div>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="The SD Group">
+  <defs>
+    <!-- SD MONOGRAM — interlocking serif -->
+    <symbol id="sd-monogram" viewBox="0 0 120 120">
+      <!-- Base serif S (champagne) -->
+      <path fill="currentColor" fill-rule="evenodd" d="M56 20c-14 0-23 8-23 18 0 8 5 13 17 17l14 5c7 2 10 4 10 8 0 5-5 8-13 8-10 0-16-4-18-12l-10 2c3 13 12 20 28 20 15 0 25-8 25-19 0-9-6-14-18-18l-13-4c-7-2-10-4-10-7 0-4 4-7 11-7 8 0 13 3 15 9l10-2c-3-11-12-18-25-18zm-5 5v5h3v-5h-3zm15 65v5h3v-5h-3z"/>
+      <!-- Overlay D (ink) -->
+      <path fill="currentColor" fill-rule="evenodd" d="M72 32c16 0 25 11 25 28s-9 28-25 28H60V32h12zm0 5h-7v46h7c12 0 19-9 19-23s-7-23-19-23z" opacity="0.55"/>
+      <!-- Top serif tick -->
+      <rect x="54" y="18" width="14" height="2" fill="currentColor"/>
+      <!-- Bottom serif tick -->
+      <rect x="54" y="100" width="14" height="2" fill="currentColor"/>
+    </symbol>
+
+    <!-- WORDMARK — THE SD GROUP -->
+    <symbol id="sd-wordmark" viewBox="0 0 260 30">
+      <text x="130" y="20" text-anchor="middle"
+            font-family="Geist, sans-serif"
+            font-size="16"
+            font-weight="500"
+            letter-spacing="4"
+            fill="currentColor">THE SD GROUP</text>
+    </symbol>
+
+    <!-- FULL LOCKUP — monogram + wordmark -->
+    <symbol id="sd-lockup" viewBox="0 0 320 120">
+      <use href="#sd-monogram" x="100" y="0" width="120" height="80"/>
+      <use href="#sd-wordmark" x="30" y="88" width="260" height="30"/>
+    </symbol>
+  </defs>
+
+  <!-- Preview: full lockup at center -->
+  <use href="#sd-lockup" fill="#141414"/>
+</svg>

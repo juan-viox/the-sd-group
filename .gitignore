@@ -1,0 +1,12 @@
+.env
+.env.local
+.DS_Store
+.vercel
+voice-agent-setup.py
+voice-agent.json
+ig-photos.json
+hero-variant-*.png
+hero-selected.png
+hero-seedance.mp4
+hero-video.mp4
+*.log
