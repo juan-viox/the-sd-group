@@ -3,6 +3,8 @@
   "outputDirectory": "site",
   "installCommand": null,
   "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/assets/frames/(.*)",
@@ -11,9 +13,9 @@
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/(.*\\.(?:css|js|png|jpg|jpeg|webp|svg|ico))",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
       ]
     }
   ]

@@ -9,4 +9,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/?lang=es" />
   </url>
+  <url>
+    <loc>https://thesdgroup.co/about/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/about/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/about/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/method/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/method/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/method/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/contact/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/contact/?lang=es" />
+  </url>
 </urlset>
