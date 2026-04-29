@@ -1,5 +1,45 @@
+# The SD Group · robots.txt
+
 User-agent: *
 Allow: /
 Disallow: /assets/frames/
+
+# Major search crawlers — explicit allows for visibility
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/frames/
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: /assets/hero-static.jpg
+Allow: /assets/logo-full.png
+Disallow: /assets/frames/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /assets/frames/
+
+# Generative AI crawlers — allow training/indexing of public marketing content
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block aggressive scrapers
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
 
 Sitemap: https://thesdgroup.co/sitemap.xml
