@@ -9,14 +9,30 @@
     {
       "source": "/assets/frames/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/assets/(.*\\.(?:css|js|png|jpg|jpeg|webp|svg|ico))",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/admin",
+      "destination": "https://thesdgroup-crm-app.vercel.app/admin"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "https://thesdgroup-crm-app.vercel.app/admin/:path*"
     }
   ]
 }
