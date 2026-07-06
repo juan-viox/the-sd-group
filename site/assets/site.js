@@ -4,6 +4,14 @@
    element-existence check so pages without certain sections
    degrade gracefully.
    ========================================================= */
+
+/* Lead capture endpoint (Mission Control CRM public intake).
+   Must match the deployed backend origin (see the CRM repo's
+   docs/deployment/HOSTINGER-VPS-BACKEND.md). Override at runtime by setting
+   window.SDG_LEADS_ENDPOINT before this script loads. */
+var SDG_LEADS_ENDPOINT = (typeof window !== 'undefined' && window.SDG_LEADS_ENDPOINT) ||
+  'https://api.thesdgroup.co/api/v1/public/leads';
+
 window.addEventListener('load', init);
 
 function init(){
@@ -320,27 +328,103 @@ function init(){
   }
 
   /* ---------- FORMS ---------- */
+  function isEs(){ return document.documentElement.lang === 'es'; }
+
+  function setStatus(form, message, kind){
+    var el = form.querySelector('.form-status');
+    if (!el){
+      el = document.createElement('p');
+      el.className = 'form-status';
+      el.setAttribute('role', 'status');
+      el.setAttribute('aria-live', 'polite');
+      form.appendChild(el);
+    }
+    el.textContent = message;
+    el.setAttribute('data-kind', kind || 'info');
+    el.hidden = false;
+  }
+
+  function submitLead(payload){
+    return fetch(SDG_LEADS_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res;
+    });
+  }
+
   var contactForm = document.getElementById('contactForm');
   if (contactForm){
     contactForm.addEventListener('submit', function(e){
       e.preventDefault();
-      var btn = e.target.querySelector('button[type="submit"]');
-      var lang = document.documentElement.lang;
-      btn.textContent = lang === 'es' ? 'Gracias · te respondo pronto' : "Thank you · I'll be in touch";
+      var form = e.target;
+      var btn = form.querySelector('button[type="submit"]');
+      var name = (form.querySelector('[name="name"]') || {}).value || '';
+      var email = (form.querySelector('[name="email"]') || {}).value || '';
+      if (!name.trim() || !email.trim()){
+        setStatus(form, isEs() ? 'Por favor completa tu nombre y correo.' : 'Please add your name and email.', 'error');
+        return;
+      }
+      var original = btn.textContent;
       btn.disabled = true;
-      e.target.querySelectorAll('input, textarea, select').forEach(function(el){ el.disabled = true; });
+      btn.textContent = isEs() ? 'Enviando…' : 'Sending…';
+      submitLead({
+        name: name,
+        email: email,
+        phone: (form.querySelector('[name="phone"]') || {}).value || null,
+        preferred_language: (form.querySelector('[name="language"]') || {}).value || null,
+        interest: (form.querySelector('[name="interest"]') || {}).value || null,
+        message: (form.querySelector('[name="message"]') || {}).value || null,
+        source: 'contact-form',
+        company: (form.querySelector('[name="company"]') || {}).value || null
+      }).then(function(){
+        setStatus(form, isEs() ? 'Gracias · te respondo pronto.' : "Thank you · I'll be in touch.", 'success');
+        btn.textContent = isEs() ? 'Enviado' : 'Sent';
+        form.querySelectorAll('input, textarea, select').forEach(function(el){ el.disabled = true; });
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = original;
+        setStatus(form, isEs()
+          ? 'No se pudo enviar. Intenta de nuevo o llama al (201) 314-5696.'
+          : "Couldn't send. Please try again or call (201) 314-5696.", 'error');
+      });
     });
   }
+
   var newsForm = document.getElementById('newsForm');
   if (newsForm){
     newsForm.addEventListener('submit', function(e){
       e.preventDefault();
       var form = e.target;
-      form.classList.add('done');
       var btn = form.querySelector('button');
-      btn.textContent = 'Thank you · Gracias';
+      var input = form.querySelector('input[type="email"], input[name="email"]');
+      var email = (input || {}).value || '';
+      if (!email.trim()){
+        setStatus(form, isEs() ? 'Ingresa tu correo.' : 'Please enter your email.', 'error');
+        return;
+      }
+      var original = btn.textContent;
       btn.disabled = true;
-      form.querySelector('input').disabled = true;
+      btn.textContent = isEs() ? 'Enviando…' : 'Sending…';
+      submitLead({
+        name: 'Newsletter subscriber',
+        email: email,
+        preferred_language: document.documentElement.lang || null,
+        interest: 'Newsletter',
+        source: 'newsletter',
+        company: (form.querySelector('[name="company"]') || {}).value || null
+      }).then(function(){
+        form.classList.add('done');
+        btn.textContent = isEs() ? 'Suscrito · Gracias' : 'Subscribed · Thank you';
+        if (input) input.disabled = true;
+        setStatus(form, isEs() ? 'Estás en la lista. Sin spam, nunca.' : "You're on the list. No spam, ever.", 'success');
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = original;
+        setStatus(form, isEs() ? 'No se pudo suscribir. Intenta de nuevo.' : "Couldn't subscribe. Please try again.", 'error');
+      });
     });
   }
 
