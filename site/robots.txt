@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 Disallow: /assets/frames/
 
-# Major search crawlers — explicit allows for visibility
+# Major search crawlers: explicit allows for visibility
 User-agent: Googlebot
 Allow: /
 Disallow: /assets/frames/
@@ -19,7 +19,7 @@ User-agent: Bingbot
 Allow: /
 Disallow: /assets/frames/
 
-# Generative AI crawlers — allow training/indexing of public marketing content
+# Generative AI crawlers: allow training/indexing of public marketing content
 User-agent: GPTBot
 Allow: /
 
