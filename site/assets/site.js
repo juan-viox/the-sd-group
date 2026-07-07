@@ -13,17 +13,17 @@ var SDG_LEADS_ENDPOINT = (typeof window !== 'undefined' && window.SDG_LEADS_ENDP
   'https://api.thesdgroup.co/api/v1/public/leads';
 
 /* Keller Williams consumer app search URL (live MLS listings + KW-native lead
-   capture). Override at runtime via window.SDG_KW_SEARCH_URL.
-   TODO: replace the placeholder with Sarah's real KW consumer app link. */
+   capture). Sarah's consumer app search, pre-scoped by map viewport to Bergen
+   County. Override at runtime via window.SDG_KW_SEARCH_URL. */
 var SDG_KW_SEARCH_URL = (typeof window !== 'undefined' && window.SDG_KW_SEARCH_URL) ||
-  'https://KW_CONSUMER_APP_URL';
+  'https://kw.com/search/1335153741173760?viewport=41.0045707579248%2C-74.1486826389403%2C40.956167752085065%2C-74.22206787758776';
 
-/* Until the consumer app link is finalized, search buttons fall back to Sarah's
-   live KW agent site (real, working page that captures leads natively) rather
-   than a dead placeholder host. */
+/* Safety net if the search URL is ever cleared/misconfigured: fall back to
+   Sarah's live KW agent site rather than a dead host. */
 var SDG_KW_FALLBACK_URL = 'https://kw.com/agent/sarah-de-jesus/2000142585';
 function sdgResolveKwUrl(){
-  return SDG_KW_SEARCH_URL.indexOf('KW_CONSUMER_APP_URL') === -1
+  return /^https?:\/\//.test(SDG_KW_SEARCH_URL) &&
+    SDG_KW_SEARCH_URL.indexOf('KW_CONSUMER_APP_URL') === -1
     ? SDG_KW_SEARCH_URL : SDG_KW_FALLBACK_URL;
 }
 
@@ -410,10 +410,12 @@ function init(){
 
   /* ---------- HOME SEARCH: launch KW consumer app ---------- */
   function openKwSearch(query){
-    var configured = SDG_KW_SEARCH_URL.indexOf('KW_CONSUMER_APP_URL') === -1;
     var url = sdgResolveKwUrl();
-    if (query && configured){
-      url += (url.indexOf('?') === -1 ? '?' : '&') + 'q=' + encodeURIComponent(query);
+    /* Only append a text query when the configured URL has no query string of
+       its own. Sarah's KW app is scoped by a map viewport (?viewport=...), so
+       we open it untouched rather than tack on a param KW would ignore. */
+    if (query && url.indexOf('?') === -1){
+      url += '?q=' + encodeURIComponent(query);
     }
     window.open(url, '_blank', 'noopener');
   }
