@@ -41,4 +41,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/contact/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/contact/?lang=es" />
   </url>
+  <url>
+    <loc>https://thesdgroup.co/home-search/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/home-search/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/home-search/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thesdgroup.co/home-search/" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/home-evaluation/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/home-evaluation/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/home-evaluation/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thesdgroup.co/home-evaluation/" />
+  </url>
 </urlset>

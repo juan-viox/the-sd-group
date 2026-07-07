@@ -14,9 +14,11 @@
   var NAV_LINKS = [
     { href: '/',               key: 'home',          en: 'Home',          es: 'Inicio' },
     { href: '/about/',         key: 'about',         en: 'About',         es: 'Sobre mí' },
-    { href: '/method/',        key: 'method',        en: 'Method',        es: 'Método' },
-    { href: '/neighborhoods/', key: 'neighborhoods', en: 'Neighborhoods', es: 'Barrios' },
-    { href: '/contact/',       key: 'contact',       en: 'Contact',       es: 'Contacto' }
+    { href: '/method/',          key: 'method',        en: 'Method',          es: 'Método' },
+    { href: '/neighborhoods/',   key: 'neighborhoods', en: 'Neighborhoods',   es: 'Barrios' },
+    { href: '/home-search/',     key: 'home-search',   en: 'Home Search',     es: 'Buscar Casa' },
+    { href: '/home-evaluation/', key: 'home-eval',     en: 'Home Evaluation', es: 'Evaluación' },
+    { href: '/contact/',         key: 'contact',       en: 'Contact',         es: 'Contacto' }
   ];
 
   function isCurrent(href){
@@ -68,6 +70,14 @@
         '<div class="foot__top">' +
           '<div class="foot__brand">' +
             '<img class="foot__logo" src="/assets/logo-full.png" alt="The SD Group · The Sarah Dee Group" width="320" height="213" loading="lazy" />' +
+            '<a class="foot__kw" href="https://kw.com/agent/sarah-de-jesus/2000142585" target="_blank" rel="noopener" aria-label="Keller Williams Village Square Realty">' +
+              '<svg class="foot__kw-svg" viewBox="0 0 254 58" fill="none" aria-hidden="true">' +
+                '<rect x="1" y="5" width="48" height="48" rx="7" fill="#B59766" />' +
+                '<text x="25" y="37" text-anchor="middle" font-family="var(--ff-display), Georgia, serif" font-weight="600" font-size="23" fill="#141414">KW</text>' +
+                '<text x="64" y="27" font-family="var(--ff-body), sans-serif" font-weight="600" font-size="16" letter-spacing="1.5" fill="#F5F1EA">KELLER WILLIAMS</text>' +
+                '<text x="65" y="45" font-family="var(--ff-body), sans-serif" font-weight="400" font-size="9.5" letter-spacing="2.8" fill="rgba(245,241,234,0.62)">VILLAGE SQUARE REALTY</text>' +
+              '</svg>' +
+            '</a>' +
             '<p class="foot__tag" data-en="Thoughtful guidance for buyers, sellers, and investors across Bergen County. Bilingual by default." data-es="Orientación cuidadosa para compradores, vendedores e inversionistas en todo el Condado de Bergen. Bilingüe por defecto.">Thoughtful guidance for buyers, sellers, and investors across Bergen County. Bilingual by default.</p>' +
             '<div class="foot__badges" role="group" aria-label="Equal Housing Opportunity and REALTOR®">' +
               '<span class="foot__badge">' +

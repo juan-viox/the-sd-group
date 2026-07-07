@@ -12,6 +12,21 @@
 var SDG_LEADS_ENDPOINT = (typeof window !== 'undefined' && window.SDG_LEADS_ENDPOINT) ||
   'https://api.thesdgroup.co/api/v1/public/leads';
 
+/* Keller Williams consumer app search URL (live MLS listings + KW-native lead
+   capture). Override at runtime via window.SDG_KW_SEARCH_URL.
+   TODO: replace the placeholder with Sarah's real KW consumer app link. */
+var SDG_KW_SEARCH_URL = (typeof window !== 'undefined' && window.SDG_KW_SEARCH_URL) ||
+  'https://KW_CONSUMER_APP_URL';
+
+/* Until the consumer app link is finalized, search buttons fall back to Sarah's
+   live KW agent site (real, working page that captures leads natively) rather
+   than a dead placeholder host. */
+var SDG_KW_FALLBACK_URL = 'https://kw.com/agent/sarah-de-jesus/2000142585';
+function sdgResolveKwUrl(){
+  return SDG_KW_SEARCH_URL.indexOf('KW_CONSUMER_APP_URL') === -1
+    ? SDG_KW_SEARCH_URL : SDG_KW_FALLBACK_URL;
+}
+
 window.addEventListener('load', init);
 
 function init(){
@@ -381,6 +396,141 @@ function init(){
         company: (form.querySelector('[name="company"]') || {}).value || null
       }).then(function(){
         setStatus(form, isEs() ? 'Gracias · te respondo pronto.' : "Thank you · I'll be in touch.", 'success');
+        btn.textContent = isEs() ? 'Enviado' : 'Sent';
+        form.querySelectorAll('input, textarea, select').forEach(function(el){ el.disabled = true; });
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = original;
+        setStatus(form, isEs()
+          ? 'No se pudo enviar. Intenta de nuevo o llama al (201) 314-5696.'
+          : "Couldn't send. Please try again or call (201) 314-5696.", 'error');
+      });
+    });
+  }
+
+  /* ---------- HOME SEARCH: launch KW consumer app ---------- */
+  function openKwSearch(query){
+    var configured = SDG_KW_SEARCH_URL.indexOf('KW_CONSUMER_APP_URL') === -1;
+    var url = sdgResolveKwUrl();
+    if (query && configured){
+      url += (url.indexOf('?') === -1 ? '?' : '&') + 'q=' + encodeURIComponent(query);
+    }
+    window.open(url, '_blank', 'noopener');
+  }
+  var searchLaunch = document.getElementById('searchLaunch');
+  if (searchLaunch){
+    searchLaunch.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = (e.target.querySelector('[name="query"]') || {}).value || '';
+      openKwSearch(q.trim());
+    });
+  }
+  var kwLaunch = document.getElementById('kwLaunch');
+  if (kwLaunch){
+    kwLaunch.setAttribute('href', sdgResolveKwUrl());
+    kwLaunch.setAttribute('target', '_blank');
+    kwLaunch.addEventListener('click', function(e){
+      e.preventDefault();
+      openKwSearch('');
+    });
+  }
+
+  /* ---------- HOME SEARCH: Bergen County map (Leaflet) ---------- */
+  var mapEl = document.getElementById('hs-map');
+  if (mapEl && typeof L !== 'undefined'){
+    var TOWNS = [
+      { name: 'Ridgewood',      lat: 40.9793, lng: -74.1165 },
+      { name: 'Wyckoff',        lat: 40.9976, lng: -74.1730 },
+      { name: 'Ho-Ho-Kus',      lat: 40.9987, lng: -74.1010 },
+      { name: 'Glen Rock',      lat: 40.9629, lng: -74.1332 },
+      { name: 'Midland Park',   lat: 40.9915, lng: -74.1424 },
+      { name: 'Franklin Lakes', lat: 41.0165, lng: -74.2060 }
+    ];
+    var map = L.map(mapEl, { scrollWheelZoom: false, attributionControl: true })
+      .setView([40.995, -74.155], 12);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap &copy; CARTO'
+    }).addTo(map);
+    TOWNS.forEach(function(t){
+      var m = L.circleMarker([t.lat, t.lng], {
+        radius: 9, color: '#141414', weight: 1.5,
+        fillColor: '#B59766', fillOpacity: 1
+      }).addTo(map);
+      m.bindPopup('<strong>' + t.name + '</strong><br><a href="/neighborhoods/">' +
+        (isEs() ? 'Ver el barrio →' : 'Explore neighborhood →') + '</a>');
+      m.bindTooltip(t.name, { permanent: false, direction: 'top' });
+    });
+    map.on('click', function(){ /* no-op; markers handle interaction */ });
+  }
+
+  /* ---------- HOME SEARCH: curated shortlist lead form ---------- */
+  var searchForm = document.getElementById('searchForm');
+  if (searchForm){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button[type="submit"]');
+      var name = (form.querySelector('[name="name"]') || {}).value || '';
+      var email = (form.querySelector('[name="email"]') || {}).value || '';
+      if (!name.trim() || !email.trim()){
+        setStatus(form, isEs() ? 'Por favor completa tu nombre y correo.' : 'Please add your name and email.', 'error');
+        return;
+      }
+      var original = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = isEs() ? 'Enviando…' : 'Sending…';
+      submitLead({
+        name: name,
+        email: email,
+        phone: (form.querySelector('[name="phone"]') || {}).value || null,
+        preferred_language: (form.querySelector('[name="language"]') || {}).value || null,
+        interest: 'Home search',
+        message: (form.querySelector('[name="message"]') || {}).value || null,
+        source: 'home-search',
+        company: (form.querySelector('[name="company"]') || {}).value || null
+      }).then(function(){
+        setStatus(form, isEs() ? 'Gracias · Sarah te preparará una lista pronto.' : "Thank you · Sarah will build your shortlist soon.", 'success');
+        btn.textContent = isEs() ? 'Enviado' : 'Sent';
+        form.querySelectorAll('input, textarea, select').forEach(function(el){ el.disabled = true; });
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = original;
+        setStatus(form, isEs()
+          ? 'No se pudo enviar. Intenta de nuevo o llama al (201) 314-5696.'
+          : "Couldn't send. Please try again or call (201) 314-5696.", 'error');
+      });
+    });
+  }
+
+  /* ---------- HOME EVALUATION: valuation request ---------- */
+  var evalForm = document.getElementById('evalForm');
+  if (evalForm){
+    evalForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button[type="submit"]');
+      var name = (form.querySelector('[name="name"]') || {}).value || '';
+      var email = (form.querySelector('[name="email"]') || {}).value || '';
+      var address = (form.querySelector('[name="address"]') || {}).value || '';
+      if (!name.trim() || !email.trim() || !address.trim()){
+        setStatus(form, isEs() ? 'Completa la dirección, tu nombre y tu correo.' : 'Please add the address, your name, and email.', 'error');
+        return;
+      }
+      var original = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = isEs() ? 'Enviando…' : 'Sending…';
+      submitLead({
+        name: name,
+        email: email,
+        phone: (form.querySelector('[name="phone"]') || {}).value || null,
+        preferred_language: (form.querySelector('[name="language"]') || {}).value || null,
+        interest: 'Home valuation',
+        message: (isEs() ? 'Solicitud de valuación para: ' : 'Home valuation request for: ') + address.trim(),
+        source: 'home-evaluation',
+        company: (form.querySelector('[name="company"]') || {}).value || null
+      }).then(function(){
+        setStatus(form, isEs() ? 'Gracias · Sarah preparará tu evaluación y te contactará.' : "Thank you · Sarah will prepare your valuation and reach out.", 'success');
         btn.textContent = isEs() ? 'Enviado' : 'Sent';
         form.querySelectorAll('input, textarea, select').forEach(function(el){ el.disabled = true; });
       }).catch(function(){

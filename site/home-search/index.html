@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title data-en="Home Search · Bergen County Listings · The SD Group" data-es="Buscar Casa · Listados en Bergen County · The SD Group">Home Search · Bergen County Listings · The SD Group</title>
+  <meta name="description" content="Search active Bergen County listings with Sarah De Jesus of The SD Group. Live MLS listings, saved favorites, and new-listing alerts through the Keller Williams app." />
+  <meta name="theme-color" content="#141414" />
+  <link rel="canonical" href="https://thesdgroup.co/home-search/" />
+  <link rel="alternate" hreflang="en" href="https://thesdgroup.co/home-search/" />
+  <link rel="alternate" hreflang="es" href="https://thesdgroup.co/home-search/?lang=es" />
+  <link rel="alternate" hreflang="x-default" href="https://thesdgroup.co/home-search/" />
+  <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="%23141414"/><g fill="%23B59766"><path fill-rule="evenodd" d="M56 20c-14 0-23 8-23 18 0 8 5 13 17 17l14 5c7 2 10 4 10 8 0 5-5 8-13 8-10 0-16-4-18-12l-10 2c3 13 12 20 28 20 15 0 25-8 25-19 0-9-6-14-18-18l-13-4c-7-2-10-4-10-7 0-4 4-7 11-7 8 0 13 3 15 9l10-2c-3-11-12-18-25-18z"/></g></svg>' />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The SD Group" />
+  <meta property="og:title" content="Home Search · Bergen County Listings · The SD Group" />
+  <meta property="og:description" content="Search active Bergen County listings with Sarah De Jesus. Live MLS listings, saved favorites, and new-listing alerts." />
+  <meta property="og:url" content="https://thesdgroup.co/home-search/" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_US" />
+  <meta property="og:image" content="https://thesdgroup.co/assets/hero-static.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/assets/styles.css?v=20260709" />
+</head>
+<body>
+  <a class="skip" href="#main" data-en="Skip to content" data-es="Saltar al contenido">Skip to content</a>
+
+  <div data-partial="lang-toggle"></div>
+  <div data-partial="nav"></div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero-light" aria-label="Home search">
+      <div class="hero-light__wrap">
+        <div class="hero-light__eyebrow eyebrow">
+          <span data-en="Home Search" data-es="Buscar Casa">HOME SEARCH</span>
+        </div>
+        <h1 data-en="Every active listing in Bergen County, in one place." data-es="Todos los listados activos de Bergen County, en un solo lugar.">Every active listing in Bergen County, in one place.</h1>
+        <p class="hero-light__sub" data-en="Browse live MLS listings, save your favorites, and get notified the moment something new hits the market, with Sarah guiding you the whole way." data-es="Explora listados en vivo del MLS, guarda tus favoritas y recibe aviso en el momento en que algo nuevo sale al mercado, con Sarah guiándote en todo el camino.">Browse live MLS listings, save your favorites, and get notified the moment something new hits the market, with Sarah guiding you the whole way.</p>
+
+        <form class="hs-search" id="searchLaunch" style="margin-top:32px">
+          <input class="hs-search__input" type="text" name="query" autocomplete="off"
+            data-en-placeholder="Search by address, city, or neighborhood" data-es-placeholder="Busca por dirección, ciudad o barrio" placeholder="Search by address, city, or neighborhood" aria-label="Search listings" />
+          <button type="submit" class="btn btn--solid" data-en="Search listings →" data-es="Buscar listados →">Search listings →</button>
+        </form>
+        <p class="hs-search__note" data-en="Opens your live search in the Keller Williams app, where you can filter, save homes, and set up instant alerts." data-es="Abre tu búsqueda en vivo en la app de Keller Williams, donde puedes filtrar, guardar casas y configurar alertas instantáneas.">Opens your live search in the Keller Williams app, where you can filter, save homes, and set up instant alerts.</p>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section aria-label="Bergen County map" style="padding-top:0">
+      <div class="wrap">
+        <div class="eyebrow eyebrow--champagne" style="text-align:center;margin-bottom:16px">
+          <span data-en="The map" data-es="El mapa">THE MAP</span>
+        </div>
+        <h2 class="display-l" style="text-align:center;max-width:760px;margin:0 auto 36px" data-en="Start with the town, then the street." data-es="Empieza por el pueblo, luego por la calle.">Start with the town, then the street.</h2>
+        <div id="hs-map" class="hs-map" role="img" aria-label="Map of Bergen County service area with neighborhood markers"></div>
+        <p class="hs-map__hint" data-en="Tap a marker to explore that neighborhood, or launch a full map search in the app." data-es="Toca un marcador para explorar ese barrio, o abre una búsqueda de mapa completa en la app.">Tap a marker to explore that neighborhood, or launch a full map search in the app.</p>
+      </div>
+    </section>
+
+    <!-- LAUNCH CTA -->
+    <section class="teaser teaser--dark" aria-label="Open the full search">
+      <div class="teaser__wrap" style="grid-template-columns:1fr;text-align:center">
+        <div class="teaser__head" style="margin:0 auto;max-width:720px">
+          <div class="eyebrow eyebrow--champagne" style="margin-bottom:16px">
+            <span data-en="Live listings" data-es="Listados en vivo">LIVE LISTINGS</span>
+          </div>
+          <h2 class="display-l" style="color:var(--bone)" data-en="See what's on the market today." data-es="Ve lo que está en el mercado hoy.">See what's on the market today.</h2>
+          <p style="color:rgba(245,241,234,0.8)" data-en="The full, up-to-the-minute MLS lives in the Keller Williams app: photos, open houses, price history, and saved searches, all synced with Sarah so she can move fast when the right home appears." data-es="El MLS completo y actualizado al minuto vive en la app de Keller Williams: fotos, casas abiertas, historial de precios y búsquedas guardadas, todo sincronizado con Sarah para que actúe rápido cuando aparezca la casa correcta.">The full, up-to-the-minute MLS lives in the Keller Williams app: photos, open houses, price history, and saved searches, all synced with Sarah so she can move fast when the right home appears.</p>
+          <a href="#" id="kwLaunch" class="btn" style="margin-top:28px" rel="noopener" data-en="Open the live search →" data-es="Abrir la búsqueda en vivo →">Open the live search →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATED FALLBACK: capture a lead -->
+    <section aria-label="Request a curated shortlist">
+      <div class="wrap" style="max-width:760px">
+        <div class="eyebrow eyebrow--champagne" style="margin-bottom:16px">
+          <span data-en="Prefer it done for you?" data-es="¿Prefieres que lo hagan por ti?">PREFER IT DONE FOR YOU?</span>
+        </div>
+        <h2 class="display-l" data-en="Tell Sarah what you're looking for." data-es="Cuéntale a Sarah qué buscas.">Tell Sarah what you're looking for.</h2>
+        <p style="margin:20px 0 32px" data-en="Share a few details and Sarah will hand-pick a shortlist, including quiet, off-market possibilities the public search never shows." data-es="Comparte algunos detalles y Sarah armará una lista seleccionada a mano, incluyendo posibilidades discretas y fuera del mercado que la búsqueda pública nunca muestra.">Share a few details and Sarah will hand-pick a shortlist, including quiet, off-market possibilities the public search never shows.</p>
+        <form class="contact__form" id="searchForm" novalidate>
+          <div class="contact__row">
+            <div class="field">
+              <label for="s-name" data-en="Name" data-es="Nombre">Name</label>
+              <input id="s-name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="s-phone" data-en="Phone" data-es="Teléfono">Phone</label>
+              <input id="s-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="contact__row">
+            <div class="field">
+              <label for="s-email">Email</label>
+              <input id="s-email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="s-lang" data-en="Preferred language" data-es="Idioma preferido">Preferred language</label>
+              <select id="s-lang" name="language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="s-criteria" data-en="What are you looking for?" data-es="¿Qué estás buscando?">What are you looking for?</label>
+            <textarea id="s-criteria" name="message" rows="4" data-en-placeholder="Towns, budget, beds/baths, timeline…" data-es-placeholder="Pueblos, presupuesto, habitaciones/baños, tiempo…" placeholder="Towns, budget, beds/baths, timeline…"></textarea>
+          </div>
+          <input class="hp-field" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn--solid contact__submit" data-en="Build my shortlist" data-es="Arma mi lista">Build my shortlist</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-partial="footer"></div>
+  <div data-partial="voice-widget"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/assets/partials.js?v=20260709"></script>
+  <script src="/assets/site.js?v=20260709"></script>
+</body>
+</html>
