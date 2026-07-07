@@ -110,7 +110,7 @@ html[lang="es"] [data-en]:not([data-es]).block{display:none}
 .nav-overlay a{font-family:var(--ff-display);font-weight:400;font-size:clamp(32px,6vw,56px);letter-spacing:-0.01em}
 .nav-overlay__close{position:absolute;top:18px;right:18px;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;color:var(--bone)}
 
-@media (max-width: 1200px){
+@media (max-width: 1240px){
   .nav__links{display:none}
   .nav__burger{display:inline-flex}
 }
@@ -370,9 +370,9 @@ footer{background:var(--deep-ink);color:rgba(245,241,234,0.7);padding:80px 0 40p
 @media(max-width:820px){.foot__top{grid-template-columns:1fr}}
 .foot__brand svg{width:120px;height:auto;color:var(--bone)}
 .foot__logo{width:260px;height:auto;margin-bottom:24px;filter:drop-shadow(0 1px 3px rgba(0,0,0,0.4))}
-.foot__kw{display:inline-block;margin:2px 0 4px;opacity:0.92;transition:opacity .4s var(--ease)}
+.foot__kw{display:inline-block;margin:6px 0 4px;opacity:0.95;transition:opacity .4s var(--ease)}
 .foot__kw:hover{opacity:1}
-.foot__kw svg{width:236px;height:auto}
+.foot__kw svg{width:208px;height:auto}
 .foot__tag{margin-top:20px;max-width:38ch;font-family:var(--ff-display);font-style:italic;font-weight:400;font-size:17px;color:rgba(245,241,234,0.8)}
 .foot__col h4{color:var(--bone);font-family:var(--ff-body);font-weight:500;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:18px}
 .foot__col ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
