@@ -68,7 +68,7 @@
         '<div class="foot__top">' +
           '<div class="foot__brand">' +
             '<img class="foot__logo" src="/assets/logo-full.png" alt="The SD Group · The Sarah Dee Group" width="320" height="213" loading="lazy" />' +
-            '<p class="foot__tag" data-en="Real estate with strategy, service, and results. Bilingual by default, from Ridgewood to the rest of Bergen." data-es="Bienes raíces con estrategia, servicio y resultados. Bilingüe por defecto, desde Ridgewood al resto de Bergen.">Real estate with strategy, service, and results. Bilingual by default, from Ridgewood to the rest of Bergen.</p>' +
+            '<p class="foot__tag" data-en="Thoughtful guidance for buyers, sellers, and investors across Bergen County. Bilingual by default." data-es="Orientación cuidadosa para compradores, vendedores e inversionistas en todo el Condado de Bergen. Bilingüe por defecto.">Thoughtful guidance for buyers, sellers, and investors across Bergen County. Bilingual by default.</p>' +
             '<div class="foot__badges" role="group" aria-label="Equal Housing Opportunity and REALTOR®">' +
               '<span class="foot__badge">' +
                 '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">' +
