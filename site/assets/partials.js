@@ -1,5 +1,5 @@
 /* =========================================================
-   The SD Group — Shared partials
+   The SD Group · Shared partials
    Injects lang toggle, nav, footer, and voice widget into
    [data-partial="..."] placeholders on every page.
    Must run BEFORE site.js (site.js queries these elements).
@@ -46,7 +46,7 @@
 
   var navHTML =
     '<nav class="nav" aria-label="Primary">' +
-      '<a class="nav__brand" href="/" aria-label="The SD Group — home">' +
+      '<a class="nav__brand" href="/" aria-label="The SD Group home">' +
         '<img class="nav__brand-logo" src="/assets/logo-mark-white.png" alt="The SD Group" />' +
       '</a>' +
       '<ul class="nav__links" role="list">' + navLinksHTML + '</ul>' +
@@ -67,8 +67,8 @@
       '<div class="foot__wrap">' +
         '<div class="foot__top">' +
           '<div class="foot__brand">' +
-            '<img class="foot__logo" src="/assets/logo-full.png" alt="The SD Group — The Sarah Dee Group" width="320" height="213" loading="lazy" />' +
-            '<p class="foot__tag" data-en="Real estate with strategy, service, and results — bilingual by default, from Ridgewood to the rest of Bergen." data-es="Bienes raíces con estrategia, servicio y resultados — bilingüe por defecto, desde Ridgewood al resto de Bergen.">Real estate with strategy, service, and results — bilingual by default, from Ridgewood to the rest of Bergen.</p>' +
+            '<img class="foot__logo" src="/assets/logo-full.png" alt="The SD Group · The Sarah Dee Group" width="320" height="213" loading="lazy" />' +
+            '<p class="foot__tag" data-en="Real estate with strategy, service, and results. Bilingual by default, from Ridgewood to the rest of Bergen." data-es="Bienes raíces con estrategia, servicio y resultados. Bilingüe por defecto, desde Ridgewood al resto de Bergen.">Real estate with strategy, service, and results. Bilingual by default, from Ridgewood to the rest of Bergen.</p>' +
             '<div class="foot__badges" role="group" aria-label="Equal Housing Opportunity and REALTOR®">' +
               '<span class="foot__badge">' +
                 '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">' +

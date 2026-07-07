@@ -1,5 +1,5 @@
 /* =========================================================
-   The SD Group — Shared site behavior
+   The SD Group · Shared site behavior
    Runs on every page. Every feature is guarded by an
    element-existence check so pages without certain sections
    degrade gracefully.
