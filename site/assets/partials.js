@@ -69,6 +69,24 @@
           '<div class="foot__brand">' +
             '<img class="foot__logo" src="/assets/logo-full.png" alt="The SD Group — The Sarah Dee Group" width="320" height="213" loading="lazy" />' +
             '<p class="foot__tag" data-en="Real estate with strategy, service, and results — bilingual by default, from Ridgewood to the rest of Bergen." data-es="Bienes raíces con estrategia, servicio y resultados — bilingüe por defecto, desde Ridgewood al resto de Bergen.">Real estate with strategy, service, and results — bilingual by default, from Ridgewood to the rest of Bergen.</p>' +
+            '<div class="foot__badges" role="group" aria-label="Equal Housing Opportunity and REALTOR®">' +
+              '<span class="foot__badge">' +
+                '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">' +
+                  '<path d="M7 22 L24 8 L41 22" />' +
+                  '<path d="M11 20 V40 H37 V20" />' +
+                  '<rect x="18" y="25" width="12" height="3" fill="currentColor" stroke="none" />' +
+                  '<rect x="18" y="31" width="12" height="3" fill="currentColor" stroke="none" />' +
+                '</svg>' +
+                '<span class="foot__badge-label" data-en="Equal Housing Opportunity" data-es="Igualdad de Oportunidades de Vivienda">Equal Housing Opportunity</span>' +
+              '</span>' +
+              '<span class="foot__badge">' +
+                '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+                  '<rect x="5" y="5" width="38" height="38" stroke="currentColor" stroke-width="2" />' +
+                  '<text x="24" y="35" text-anchor="middle" font-family="var(--ff-display), serif" font-weight="600" font-size="30" fill="currentColor">R</text>' +
+                '</svg>' +
+                '<span class="foot__badge-label">REALTOR&reg;</span>' +
+              '</span>' +
+            '</div>' +
           '</div>' +
           '<div class="foot__col">' +
             '<h4 data-en="Explore" data-es="Explora">EXPLORE</h4>' +
@@ -100,10 +118,6 @@
           '<div>' +
             '<p>© 2026 The SD Group · <span data-en="A Keller Williams Village Square Realty brand." data-es="Una marca de Keller Williams Village Square Realty.">A Keller Williams Village Square Realty brand.</span></p>' +
             '<p style="margin-top:6px">NJ REALTOR® #2669265 · <span data-en="Each Keller Williams® office is independently owned and operated." data-es="Cada oficina de Keller Williams® es de propiedad y operación independiente.">Each Keller Williams® office is independently owned and operated.</span></p>' +
-          '</div>' +
-          '<div class="eho" aria-label="Equal Housing Opportunity">' +
-            '<span class="eho__mark" aria-hidden="true"></span>' +
-            '<span data-en="Equal Housing Opportunity" data-es="Igualdad de Oportunidades de Vivienda">Equal Housing Opportunity</span>' +
           '</div>' +
         '</div>' +
       '</div>' +
