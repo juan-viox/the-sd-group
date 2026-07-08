@@ -409,17 +409,15 @@ function init(){
   }
 
   /* ---------- KW links: any .js-kw-link opens the KW consumer app ----------
-     Optional data-kw-viewport="north,east,south,west" re-centers the KW map on
-     a specific town, so a "Browse Properties in <Town>" button lands pre-scoped
-     to that town instead of the whole county. */
+     An explicit data-kw-url wins (per-town for-sale search that carries the
+     town's KW place ID, so it lands scoped to that town); otherwise fall back
+     to the county-wide search. */
   var kwLinks = document.querySelectorAll('.js-kw-link');
   if (kwLinks.length){
     var kwBase = sdgResolveKwUrl();
-    var kwRoot = kwBase.split('?')[0];
-    var kwIsSearch = kwBase.indexOf('/search/') !== -1;
     kwLinks.forEach(function(a){
-      var vp = a.getAttribute('data-kw-viewport');
-      a.setAttribute('href', (vp && kwIsSearch) ? (kwRoot + '?viewport=' + encodeURIComponent(vp)) : kwBase);
+      var explicit = a.getAttribute('data-kw-url');
+      a.setAttribute('href', explicit || kwBase);
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
     });
