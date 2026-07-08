@@ -408,6 +408,23 @@ function init(){
     });
   }
 
+  /* ---------- KW links: any .js-kw-link opens the KW consumer app ----------
+     Optional data-kw-viewport="north,east,south,west" re-centers the KW map on
+     a specific town, so a "Browse Properties in <Town>" button lands pre-scoped
+     to that town instead of the whole county. */
+  var kwLinks = document.querySelectorAll('.js-kw-link');
+  if (kwLinks.length){
+    var kwBase = sdgResolveKwUrl();
+    var kwRoot = kwBase.split('?')[0];
+    var kwIsSearch = kwBase.indexOf('/search/') !== -1;
+    kwLinks.forEach(function(a){
+      var vp = a.getAttribute('data-kw-viewport');
+      a.setAttribute('href', (vp && kwIsSearch) ? (kwRoot + '?viewport=' + encodeURIComponent(vp)) : kwBase);
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    });
+  }
+
   /* ---------- HOME SEARCH: launch KW consumer app ---------- */
   function openKwSearch(query){
     var url = sdgResolveKwUrl();
