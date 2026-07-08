@@ -14,7 +14,7 @@
   var NAV_LINKS = [
     { href: '/',               key: 'home',          en: 'Home',          es: 'Inicio' },
     { href: '/about/',         key: 'about',         en: 'About',         es: 'Sobre mí' },
-    { href: '/method/',          key: 'method',        en: 'Method',          es: 'Método' },
+    { href: '/method/',          key: 'method',        en: 'Our Process',     es: 'Nuestro Proceso' },
     { href: '/neighborhoods/',   key: 'neighborhoods', en: 'Neighborhoods',   es: 'Barrios' },
     { href: '/home-search/',     key: 'home-search',   en: 'Home Search',     es: 'Buscar Casa' },
     { href: '/home-evaluation/', key: 'home-eval',     en: 'Home Evaluation', es: 'Evaluación' },
@@ -71,11 +71,15 @@
           '<div class="foot__brand">' +
             '<img class="foot__logo" src="/assets/logo-full.png" alt="The SD Group · The Sarah Dee Group" width="320" height="213" loading="lazy" />' +
             '<a class="foot__kw" href="https://kw.com/agent/sarah-de-jesus/2000142585" target="_blank" rel="noopener" aria-label="Keller Williams Village Square Realty">' +
-              '<svg class="foot__kw-svg" viewBox="0 0 254 58" fill="none" aria-hidden="true">' +
-                '<rect x="1" y="5" width="48" height="48" rx="7" fill="#B59766" />' +
-                '<text x="25" y="37" text-anchor="middle" font-family="var(--ff-display), Georgia, serif" font-weight="600" font-size="23" fill="#141414">KW</text>' +
-                '<text x="64" y="27" font-family="var(--ff-body), sans-serif" font-weight="600" font-size="16" letter-spacing="1.5" fill="#F5F1EA">KELLER WILLIAMS</text>' +
-                '<text x="65" y="45" font-family="var(--ff-body), sans-serif" font-weight="400" font-size="9.5" letter-spacing="2.8" fill="rgba(245,241,234,0.62)">VILLAGE SQUARE REALTY</text>' +
+              '<svg class="foot__kw-svg" viewBox="0 0 322 138" fill="none" aria-hidden="true">' +
+                '<defs><mask id="kwCut">' +
+                  '<rect x="2" y="6" width="82" height="82" rx="4" fill="#fff" />' +
+                  '<text x="43" y="66" text-anchor="middle" font-family="var(--ff-body), Arial, sans-serif" font-weight="700" font-size="50" fill="#000">kw</text>' +
+                '</mask></defs>' +
+                '<rect x="2" y="6" width="82" height="82" rx="4" fill="#FFFFFF" mask="url(#kwCut)" />' +
+                '<text x="96" y="41" font-family="var(--ff-body), Arial, sans-serif" font-weight="700" font-size="20" letter-spacing="0.2" fill="#FFFFFF">VILLAGE SQUARE</text>' +
+                '<text x="96" y="69" font-family="var(--ff-body), Arial, sans-serif" font-weight="700" font-size="20" letter-spacing="0.2" fill="#FFFFFF">REALTY</text>' +
+                '<text x="4" y="127" font-family="var(--ff-body), Arial, sans-serif" font-size="24" letter-spacing="0.4" fill="#FFFFFF"><tspan font-weight="700">KELLER</tspan><tspan font-weight="300">WILLIAMS</tspan><tspan font-weight="700">.</tspan></text>' +
               '</svg>' +
             '</a>' +
             '<p class="foot__tag" data-en="Thoughtful guidance for buyers, sellers, and investors across Bergen County. Bilingual by default." data-es="Orientación cuidadosa para compradores, vendedores e inversionistas en todo el Condado de Bergen. Bilingüe por defecto.">Thoughtful guidance for buyers, sellers, and investors across Bergen County. Bilingual by default.</p>' +
