@@ -444,3 +444,26 @@ footer{background:var(--deep-ink);color:rgba(245,241,234,0.7);padding:80px 0 40p
 .he-form .field input::placeholder{color:rgba(245,241,234,0.42)}
 .he-form .field input:focus,.he-form .field select:focus{border-bottom-color:var(--champagne)}
 .he-form .field select option{color:var(--ink)}
+
+/* =========================================================
+   NEIGHBORHOOD TOWN PAGES
+   ========================================================= */
+.town__crumb{margin-top:30px}
+.town__crumb a{font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(245,241,234,0.65);transition:color .4s var(--ease)}
+.town__crumb a:hover{color:var(--champagne)}
+.town{padding:var(--section-pad-y) 0}
+.town__wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:start}
+@media(max-width:860px){.town__wrap{grid-template-columns:1fr;gap:36px}}
+.town__body h2{margin-bottom:22px;max-width:22ch}
+.town__body p{margin-bottom:18px;color:#333;max-width:62ch}
+.town__facts{border:1px solid var(--rule);padding:28px 26px;background:var(--soft-white)}
+.town__facts-list{margin:0;display:grid;gap:16px}
+.town__facts-list > div{display:flex;flex-direction:column;gap:5px;padding-bottom:15px;border-bottom:1px solid var(--rule)}
+.town__facts-list > div:last-child{border-bottom:0;padding-bottom:0}
+.town__facts-list dt{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--dim);font-weight:500}
+.town__facts-list dd{margin:0;font-family:var(--ff-display);font-size:20px;color:var(--ink)}
+.town__facts-note{margin-top:20px;font-size:12px;color:var(--dim);line-height:1.6}
+.town__contact{font-size:14px;letter-spacing:0.02em;color:rgba(245,241,234,0.75);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.town__contact a{color:var(--champagne)}
+.town__contact a:hover{text-decoration:underline}
+.nbh__cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:26px}

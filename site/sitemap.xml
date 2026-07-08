@@ -59,4 +59,76 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/home-evaluation/?lang=es" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://thesdgroup.co/home-evaluation/" />
   </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/wyckoff/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/wyckoff/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/wyckoff/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/ridgewood/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/ridgewood/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/ridgewood/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/franklin-lakes/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/franklin-lakes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/franklin-lakes/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/ho-ho-kus/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/ho-ho-kus/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/ho-ho-kus/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/glen-rock/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/glen-rock/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/glen-rock/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/midland-park/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/midland-park/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/midland-park/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/allendale/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/allendale/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/allendale/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/oakland/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/oakland/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/oakland/?lang=es" />
+  </url>
+  <url>
+    <loc>https://thesdgroup.co/neighborhoods/mahwah/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesdgroup.co/neighborhoods/mahwah/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://thesdgroup.co/neighborhoods/mahwah/?lang=es" />
+  </url>
 </urlset>
