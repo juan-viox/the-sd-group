@@ -408,56 +408,20 @@ function init(){
     });
   }
 
-  /* ---------- KW links: any .js-kw-link opens the KW consumer app ---------- */
+  /* ---------- KW links: any .js-kw-link opens the KW consumer app ----------
+     Optional data-kw-viewport="north,east,south,west" re-centers the KW map on
+     a specific town, so a "Browse Properties in <Town>" button lands pre-scoped
+     to that town instead of the whole county. */
   var kwLinks = document.querySelectorAll('.js-kw-link');
   if (kwLinks.length){
-    var kwHref = sdgResolveKwUrl();
+    var kwBase = sdgResolveKwUrl();
+    var kwRoot = kwBase.split('?')[0];
+    var kwIsSearch = kwBase.indexOf('/search/') !== -1;
     kwLinks.forEach(function(a){
-      a.setAttribute('href', kwHref);
+      var vp = a.getAttribute('data-kw-viewport');
+      a.setAttribute('href', (vp && kwIsSearch) ? (kwRoot + '?viewport=' + encodeURIComponent(vp)) : kwBase);
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
-    });
-  }
-
-  /* ---------- NEIGHBORHOOD TOWN: "handle the search for me" lead ---------- */
-  var townLead = document.getElementById('townLead');
-  if (townLead){
-    townLead.addEventListener('submit', function(e){
-      e.preventDefault();
-      var form = e.target;
-      var town = form.getAttribute('data-town') || 'Bergen County';
-      var slug = form.getAttribute('data-slug') || 'town';
-      var btn = form.querySelector('button[type="submit"]');
-      var name = (form.querySelector('[name="name"]') || {}).value || '';
-      var email = (form.querySelector('[name="email"]') || {}).value || '';
-      if (!name.trim() || !email.trim()){
-        setStatus(form, isEs() ? 'Por favor completa tu nombre y correo.' : 'Please add your name and email.', 'error');
-        return;
-      }
-      var original = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = isEs() ? 'Enviando…' : 'Sending…';
-      var msg = (form.querySelector('[name="message"]') || {}).value || '';
-      submitLead({
-        name: name,
-        email: email,
-        phone: (form.querySelector('[name="phone"]') || {}).value || null,
-        preferred_language: (form.querySelector('[name="language"]') || {}).value || null,
-        interest: 'Properties in ' + town,
-        message: msg ? ('[' + town + '] ' + msg) : ('Interested in ' + town + ' properties.'),
-        source: 'neighborhood-' + slug,
-        company: (form.querySelector('[name="company"]') || {}).value || null
-      }).then(function(){
-        setStatus(form, isEs() ? ('Gracias · te contacto pronto con opciones en ' + town + '.') : ("Thank you · I'll be in touch with " + town + " options."), 'success');
-        btn.textContent = isEs() ? 'Enviado' : 'Sent';
-        form.querySelectorAll('input, textarea, select').forEach(function(el){ el.disabled = true; });
-      }).catch(function(){
-        btn.disabled = false;
-        btn.textContent = original;
-        setStatus(form, isEs()
-          ? 'No se pudo enviar. Intenta de nuevo o llama al (201) 314-5696.'
-          : "Couldn't send. Please try again or call (201) 314-5696.", 'error');
-      });
     });
   }
 
