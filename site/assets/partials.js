@@ -122,6 +122,9 @@
               '<a href="https://www.instagram.com/thesdgroup/" target="_blank" rel="noopener" aria-label="Instagram">' +
                 '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>' +
               '</a>' +
+              '<a href="https://www.linkedin.com/in/sarahdejesusrealtor" target="_blank" rel="noopener" aria-label="LinkedIn">' +
+                '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.25 8.02h4.45V22H.25V8.02zM8.02 8.02h4.27v1.9h.06c.6-1.13 2.05-2.32 4.22-2.32 4.51 0 5.34 2.97 5.34 6.83V22h-4.45v-6.18c0-1.47-.03-3.37-2.05-3.37-2.06 0-2.37 1.6-2.37 3.26V22H8.02V8.02z"/></svg>' +
+              '</a>' +
               '<a href="https://kw.com/agent/sarah-de-jesus/2000142585" target="_blank" rel="noopener" aria-label="Keller Williams profile">' +
                 '<span style="font-family:var(--ff-display);font-weight:500;font-size:14px">kw</span>' +
               '</a>' +
