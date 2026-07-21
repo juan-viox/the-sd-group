@@ -119,6 +119,9 @@
               '<li>74 Godwin Ave, Ridgewood NJ 07450</li>' +
             '</ul>' +
             '<div class="foot__socials" style="margin-top:22px">' +
+              '<a href="https://www.facebook.com/thesdgroupco" target="_blank" rel="noopener" aria-label="Facebook">' +
+                '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.51 1.54-1.51H16.7V3.62c-.29-.04-1.3-.12-2.46-.12-2.43 0-4.1 1.49-4.1 4.21V9.9H7.4V13h2.74v8h3.36z"/></svg>' +
+              '</a>' +
               '<a href="https://www.instagram.com/thesdgroup/" target="_blank" rel="noopener" aria-label="Instagram">' +
                 '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>' +
               '</a>' +
